@@ -22,7 +22,7 @@
 
 
             ' Open dashboard and pass role if needed
-            Dim adminDashBoard As New adminDashBoard()
+            Dim adminDashBoard As New frmadminDashBoard()
             adminDashBoard.UserRole = userRole ' This should be a public property in frmDashboard
             adminDashBoard.UserName = userName ' Optional
             adminDashBoard.Show()

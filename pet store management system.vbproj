@@ -155,6 +155,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -301,6 +302,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2025-05-30 at 23.52.14_8a2a59f21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-01 at 19.22.13_f548fd24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

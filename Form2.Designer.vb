@@ -32,11 +32,7 @@ Partial Class frmLogin
         Me.txtUserName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1.SuspendLayout()
-        Me.Guna2Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -163,38 +159,6 @@ Partial Class frmLogin
         Me.Guna2Panel2.Size = New System.Drawing.Size(344, 310)
         Me.Guna2Panel2.TabIndex = 0
         '
-        'Guna2Panel3
-        '
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel3.Controls.Add(Me.Guna2ControlBox2)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2ControlBox1)
-        Me.Guna2Panel3.Location = New System.Drawing.Point(-2, -6)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(1214, 51)
-        Me.Guna2Panel3.TabIndex = 1
-        '
-        'Guna2ControlBox2
-        '
-        Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.Guna2ControlBox2.CustomIconSize = 15.0!
-        Me.Guna2ControlBox2.FillColor = System.Drawing.Color.White
-        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.Black
-        Me.Guna2ControlBox2.Location = New System.Drawing.Point(1075, 8)
-        Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
-        Me.Guna2ControlBox2.Size = New System.Drawing.Size(47, 40)
-        Me.Guna2ControlBox2.TabIndex = 2
-        '
-        'Guna2ControlBox1
-        '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.Black
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(1128, 8)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(47, 40)
-        Me.Guna2ControlBox1.TabIndex = 0
-        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -202,16 +166,14 @@ Partial Class frmLogin
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.pet_store_management_system.My.Resources.Resources.WhatsApp_Image_2025_05_30_at_23_09_13_f6b302d8
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1207, 726)
-        Me.Controls.Add(Me.Guna2Panel3)
+        Me.ClientSize = New System.Drawing.Size(1185, 675)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login_ Interface"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        Me.Guna2Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -224,8 +186,5 @@ Partial Class frmLogin
     Friend WithEvents txtUserName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents lblForgotPassword As Label
 End Class
