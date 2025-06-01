@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class frmFrontPage
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblReportProgress.Text = pbLoarding1.Value & "%"
 
@@ -22,7 +22,7 @@
 
         If pbLoarding1.Value = 100 Then
             lblStatusText.Text = "Launching application..."
-            Form2.Show()
+            frmLogin.Show()
             Me.Hide()
             Timer1.Dispose()
         End If
