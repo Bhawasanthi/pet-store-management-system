@@ -137,6 +137,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dbConnection.vb" />
+    <Compile Include="employeeReg.Designer.vb">
+      <DependentUpon>employeeReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employeeReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
   <ItemGroup>
     <EmbeddedResource Include="adminDashBoard.resx">
       <DependentUpon>adminDashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeReg.resx">
+      <DependentUpon>employeeReg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -320,6 +329,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-01 at 14.44.23_04b612ac1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-05-30 at 23.09.21_7d9a6cb31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-05-30 at 23.52.16_516c148c1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

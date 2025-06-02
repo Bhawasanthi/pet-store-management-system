@@ -32,6 +32,7 @@ Partial Class frmLogin
         Me.txtUserName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,6 +44,7 @@ Partial Class frmLogin
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Guna2Panel1.Controls.Add(Me.CheckBox1)
         Me.Guna2Panel1.Controls.Add(Me.lblForgotPassword)
         Me.Guna2Panel1.Controls.Add(Me.btnLogin)
         Me.Guna2Panel1.Controls.Add(Me.txtPassword)
@@ -58,7 +60,7 @@ Partial Class frmLogin
         'lblForgotPassword
         '
         Me.lblForgotPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblForgotPassword.Location = New System.Drawing.Point(63, 606)
+        Me.lblForgotPassword.Location = New System.Drawing.Point(66, 629)
         Me.lblForgotPassword.Name = "lblForgotPassword"
         Me.lblForgotPassword.Size = New System.Drawing.Size(212, 31)
         Me.lblForgotPassword.TabIndex = 4
@@ -78,7 +80,7 @@ Partial Class frmLogin
         Me.btnLogin.FillColor = System.Drawing.Color.Black
         Me.btnLogin.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(96, 532)
+        Me.btnLogin.Location = New System.Drawing.Point(96, 561)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(143, 56)
         Me.btnLogin.TabIndex = 3
@@ -104,12 +106,12 @@ Partial Class frmLogin
         Me.txtPassword.Location = New System.Drawing.Point(3, 448)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.PlaceholderForeColor = System.Drawing.Color.Black
         Me.txtPassword.PlaceholderText = "Password"
         Me.txtPassword.SelectedText = ""
         Me.txtPassword.Size = New System.Drawing.Size(338, 56)
         Me.txtPassword.TabIndex = 2
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'lblUserLogin
         '
@@ -159,6 +161,15 @@ Partial Class frmLogin
         Me.Guna2Panel2.Size = New System.Drawing.Size(344, 310)
         Me.Guna2Panel2.TabIndex = 0
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.Location = New System.Drawing.Point(20, 511)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(145, 44)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "Show Password"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -166,7 +177,7 @@ Partial Class frmLogin
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.pet_store_management_system.My.Resources.Resources.WhatsApp_Image_2025_05_30_at_23_09_13_f6b302d8
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1185, 675)
+        Me.ClientSize = New System.Drawing.Size(1185, 721)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmLogin"
@@ -187,4 +198,5 @@ Partial Class frmLogin
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblForgotPassword As Label
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
