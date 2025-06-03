@@ -59,6 +59,7 @@ Partial Class employeeReg
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(468, 570)
         Me.Label1.Name = "Label1"
@@ -69,6 +70,7 @@ Partial Class employeeReg
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(17, 358)
         Me.Label2.Name = "Label2"
@@ -79,6 +81,7 @@ Partial Class employeeReg
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(92, 506)
         Me.Label3.Name = "Label3"
@@ -89,6 +92,7 @@ Partial Class employeeReg
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(71, 111)
         Me.Label4.Name = "Label4"
@@ -99,6 +103,7 @@ Partial Class employeeReg
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(108, 431)
         Me.Label5.Name = "Label5"
@@ -109,6 +114,7 @@ Partial Class employeeReg
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(508, 647)
         Me.Label6.Name = "Label6"
@@ -119,6 +125,7 @@ Partial Class employeeReg
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(45, 570)
         Me.Label7.Name = "Label7"
@@ -128,6 +135,7 @@ Partial Class employeeReg
         '
         'txtFullName
         '
+        Me.txtFullName.BorderColor = System.Drawing.Color.Black
         Me.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtFullName.DefaultText = ""
         Me.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -147,6 +155,7 @@ Partial Class employeeReg
         '
         'txtContactNumber
         '
+        Me.txtContactNumber.BorderColor = System.Drawing.Color.Black
         Me.txtContactNumber.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtContactNumber.DefaultText = ""
         Me.txtContactNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -154,7 +163,7 @@ Partial Class employeeReg
         Me.txtContactNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtContactNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtContactNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtContactNumber.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContactNumber.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold)
         Me.txtContactNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtContactNumber.Location = New System.Drawing.Point(217, 341)
         Me.txtContactNumber.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -166,6 +175,7 @@ Partial Class employeeReg
         '
         'txtEmail
         '
+        Me.txtEmail.BorderColor = System.Drawing.Color.Black
         Me.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtEmail.DefaultText = ""
         Me.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -173,7 +183,7 @@ Partial Class employeeReg
         Me.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold)
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.Location = New System.Drawing.Point(217, 422)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -185,6 +195,8 @@ Partial Class employeeReg
         '
         'txtSalary
         '
+        Me.txtSalary.BackColor = System.Drawing.SystemColors.Control
+        Me.txtSalary.BorderColor = System.Drawing.Color.Black
         Me.txtSalary.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtSalary.DefaultText = ""
         Me.txtSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -192,7 +204,7 @@ Partial Class employeeReg
         Me.txtSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSalary.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSalary.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold)
         Me.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSalary.Location = New System.Drawing.Point(616, 635)
         Me.txtSalary.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -204,6 +216,7 @@ Partial Class employeeReg
         '
         'txtimage_path
         '
+        Me.txtimage_path.BorderColor = System.Drawing.Color.Black
         Me.txtimage_path.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtimage_path.DefaultText = ""
         Me.txtimage_path.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -211,7 +224,7 @@ Partial Class employeeReg
         Me.txtimage_path.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtimage_path.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtimage_path.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtimage_path.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtimage_path.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold)
         Me.txtimage_path.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtimage_path.Location = New System.Drawing.Point(854, 299)
         Me.txtimage_path.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -242,18 +255,22 @@ Partial Class employeeReg
         '
         'pictureBox
         '
+        Me.pictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pictureBox.ImageRotate = 0!
-        Me.pictureBox.Location = New System.Drawing.Point(882, 84)
+        Me.pictureBox.Location = New System.Drawing.Point(885, 84)
         Me.pictureBox.Name = "pictureBox"
         Me.pictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.pictureBox.Size = New System.Drawing.Size(233, 208)
         Me.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pictureBox.TabIndex = 15
         Me.pictureBox.TabStop = False
+        Me.pictureBox.UseTransparentBackground = True
         '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(89, 647)
         Me.Label9.Name = "Label9"
@@ -264,6 +281,7 @@ Partial Class employeeReg
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(758, 299)
         Me.Label10.Name = "Label10"
@@ -273,6 +291,7 @@ Partial Class employeeReg
         '
         'txtPosition
         '
+        Me.txtPosition.BorderColor = System.Drawing.Color.Black
         Me.txtPosition.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPosition.DefaultText = ""
         Me.txtPosition.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -280,7 +299,7 @@ Partial Class employeeReg
         Me.txtPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPosition.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPosition.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPosition.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold)
         Me.txtPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPosition.Location = New System.Drawing.Point(217, 635)
         Me.txtPosition.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -303,6 +322,7 @@ Partial Class employeeReg
         'rbMale
         '
         Me.rbMale.AutoSize = True
+        Me.rbMale.BackColor = System.Drawing.Color.Transparent
         Me.rbMale.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbMale.Location = New System.Drawing.Point(217, 506)
         Me.rbMale.Name = "rbMale"
@@ -310,11 +330,12 @@ Partial Class employeeReg
         Me.rbMale.TabIndex = 21
         Me.rbMale.TabStop = True
         Me.rbMale.Text = "Male"
-        Me.rbMale.UseVisualStyleBackColor = True
+        Me.rbMale.UseVisualStyleBackColor = False
         '
         'rbFemale
         '
         Me.rbFemale.AutoSize = True
+        Me.rbFemale.BackColor = System.Drawing.Color.Transparent
         Me.rbFemale.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbFemale.Location = New System.Drawing.Point(357, 508)
         Me.rbFemale.Name = "rbFemale"
@@ -322,10 +343,11 @@ Partial Class employeeReg
         Me.rbFemale.TabIndex = 22
         Me.rbFemale.TabStop = True
         Me.rbFemale.Text = "Female"
-        Me.rbFemale.UseVisualStyleBackColor = True
+        Me.rbFemale.UseVisualStyleBackColor = False
         '
         'txtUserName
         '
+        Me.txtUserName.BorderColor = System.Drawing.Color.Black
         Me.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtUserName.DefaultText = ""
         Me.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -345,6 +367,7 @@ Partial Class employeeReg
         '
         'txtPassword
         '
+        Me.txtPassword.BorderColor = System.Drawing.Color.Black
         Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPassword.DefaultText = ""
         Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -352,7 +375,7 @@ Partial Class employeeReg
         Me.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold)
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Location = New System.Drawing.Point(217, 259)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -365,6 +388,7 @@ Partial Class employeeReg
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(62, 187)
         Me.Label11.Name = "Label11"
@@ -375,6 +399,7 @@ Partial Class employeeReg
         'Label12
         '
         Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(76, 269)
         Me.Label12.Name = "Label12"
@@ -386,11 +411,12 @@ Partial Class employeeReg
         '
         Me.btnBrowse.Animated = True
         Me.btnBrowse.AutoRoundedCorners = True
+        Me.btnBrowse.BackColor = System.Drawing.Color.Transparent
         Me.btnBrowse.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnBrowse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnBrowse.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnBrowse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnBrowse.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnBrowse.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBrowse.ForeColor = System.Drawing.Color.White
         Me.btnBrowse.Location = New System.Drawing.Point(957, 358)
         Me.btnBrowse.Name = "btnBrowse"
@@ -402,11 +428,12 @@ Partial Class employeeReg
         '
         Me.btnRegister.Animated = True
         Me.btnRegister.AutoRoundedCorners = True
+        Me.btnRegister.BackColor = System.Drawing.Color.Transparent
         Me.btnRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnRegister.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnRegister.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegister.ForeColor = System.Drawing.Color.White
         Me.btnRegister.Location = New System.Drawing.Point(842, 710)
         Me.btnRegister.Name = "btnRegister"
@@ -423,11 +450,12 @@ Partial Class employeeReg
         '
         Me.btnReset.Animated = True
         Me.btnReset.AutoRoundedCorners = True
+        Me.btnReset.BackColor = System.Drawing.Color.Transparent
         Me.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnReset.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.Color.White
         Me.btnReset.Location = New System.Drawing.Point(1049, 710)
         Me.btnReset.Name = "btnReset"
@@ -449,7 +477,9 @@ Partial Class employeeReg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1262, 781)
+        Me.BackgroundImage = Global.pet_store_management_system.My.Resources.Resources.WhatsApp_Image_2025_06_02_at_20_34_38_2601542b
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1272, 781)
         Me.Controls.Add(Me.dtpDateHired)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnRegister)

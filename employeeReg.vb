@@ -93,4 +93,5 @@ Public Class employeeReg
         pictureBox.Image = Nothing
     End Sub
 
+
 End Class

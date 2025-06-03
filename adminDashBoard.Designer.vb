@@ -48,6 +48,7 @@ Partial Class frmadminDashBoard
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2Panel1.Controls.Add(Me.dropPnl1)
+        Me.Guna2Panel1.Controls.Add(Me.dropBtn1)
         Me.Guna2Panel1.Controls.Add(Me.btn10)
         Me.Guna2Panel1.Controls.Add(Me.btn11)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
@@ -63,15 +64,14 @@ Partial Class frmadminDashBoard
         '
         'dropPnl1
         '
-        Me.dropPnl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.dropPnl1.Controls.Add(Me.dropBtn1)
+        Me.dropPnl1.BackColor = System.Drawing.Color.Transparent
         Me.dropPnl1.Controls.Add(Me.btn6)
         Me.dropPnl1.Controls.Add(Me.btn5)
         Me.dropPnl1.Controls.Add(Me.btn4)
         Me.dropPnl1.Controls.Add(Me.btn3)
         Me.dropPnl1.Controls.Add(Me.btn2)
         Me.dropPnl1.Controls.Add(Me.btn1)
-        Me.dropPnl1.Location = New System.Drawing.Point(0, 173)
+        Me.dropPnl1.Location = New System.Drawing.Point(295, 171)
         Me.dropPnl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dropPnl1.MaximumSize = New System.Drawing.Size(267, 511)
         Me.dropPnl1.MinimumSize = New System.Drawing.Size(333, 54)
@@ -92,7 +92,7 @@ Partial Class frmadminDashBoard
         Me.dropBtn1.ForeColor = System.Drawing.Color.White
         Me.dropBtn1.Image = Global.pet_store_management_system.My.Resources.Resources.download__2_3
         Me.dropBtn1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.dropBtn1.Location = New System.Drawing.Point(-44, -2)
+        Me.dropBtn1.Location = New System.Drawing.Point(-44, 171)
         Me.dropBtn1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dropBtn1.Name = "dropBtn1"
         Me.dropBtn1.Size = New System.Drawing.Size(333, 54)

@@ -173,6 +173,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="petform.Designer.vb">
+      <DependentUpon>petform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="petform.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="userDashBoard.Designer.vb">
       <DependentUpon>userDashBoard.vb</DependentUpon>
     </Compile>
@@ -198,6 +204,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="petform.resx">
+      <DependentUpon>petform.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userDashBoard.resx">
       <DependentUpon>userDashBoard.vb</DependentUpon>
@@ -341,6 +350,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-05-30 at 23.52.14_8a2a59f22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.29.45_41780e70.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.39_55dd049b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.38_2601542b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.39_55dd049b1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.39_35c3b156.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.39_c356f393.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.44.23_4b7a39bc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-03 at 11.19.03_b10bce15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.38_ce1ba455.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.39_c356f3931.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.44.24_157223ad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-05-30 at 23.52.17_b836576a1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.38_ce1ba4551.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-03 at 11.34.28_697535f1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-03 at 11.34.28_b05ee286.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ee878c19d147d02952a1f67229c6536a.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cute-puppy-with-blue-sky-and-clouds-on-the-background-ai-generated-photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-06-02 at 20.34.38_2601542b1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\akka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
