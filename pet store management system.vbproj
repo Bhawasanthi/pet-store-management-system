@@ -136,6 +136,18 @@
     <Compile Include="adminDashBoard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="appointment.Designer.vb">
+      <DependentUpon>appointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="appointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.vb">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dbConnection.vb" />
     <Compile Include="employeeReg.Designer.vb">
       <DependentUpon>employeeReg.vb</DependentUpon>
@@ -179,6 +191,18 @@
     <Compile Include="petform.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="product.Designer.vb">
+      <DependentUpon>product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="service.Designer.vb">
+      <DependentUpon>service.vb</DependentUpon>
+    </Compile>
+    <Compile Include="service.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="userDashBoard.Designer.vb">
       <DependentUpon>userDashBoard.vb</DependentUpon>
     </Compile>
@@ -189,6 +213,12 @@
   <ItemGroup>
     <EmbeddedResource Include="adminDashBoard.resx">
       <DependentUpon>adminDashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appointment.resx">
+      <DependentUpon>appointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employeeReg.resx">
       <DependentUpon>employeeReg.vb</DependentUpon>
@@ -207,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="petform.resx">
       <DependentUpon>petform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="product.resx">
+      <DependentUpon>product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="service.resx">
+      <DependentUpon>service.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userDashBoard.resx">
       <DependentUpon>userDashBoard.vb</DependentUpon>
@@ -422,6 +458,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-05-30 at 23.52.15_9e50011e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-05-30 at 23.52.15_157960fb1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
