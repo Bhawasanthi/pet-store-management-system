@@ -25,6 +25,7 @@ Partial Class frmLogin
         Me.components = New System.ComponentModel.Container()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.lblForgotPassword = New System.Windows.Forms.Label()
         Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
@@ -32,7 +33,6 @@ Partial Class frmLogin
         Me.txtUserName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,10 +52,19 @@ Partial Class frmLogin
         Me.Guna2Panel1.Controls.Add(Me.txtUserName)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Panel2)
         Me.Guna2Panel1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Guna2Panel1.Location = New System.Drawing.Point(61, 61)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(76, 12)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(344, 660)
         Me.Guna2Panel1.TabIndex = 0
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.Location = New System.Drawing.Point(20, 511)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(145, 44)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "Show Password"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'lblForgotPassword
         '
@@ -161,15 +170,6 @@ Partial Class frmLogin
         Me.Guna2Panel2.Size = New System.Drawing.Size(344, 310)
         Me.Guna2Panel2.TabIndex = 0
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.Location = New System.Drawing.Point(20, 511)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(145, 44)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Show Password"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -178,7 +178,9 @@ Partial Class frmLogin
         Me.BackgroundImage = Global.pet_store_management_system.My.Resources.Resources.WhatsApp_Image_2025_05_30_at_23_09_13_f6b302d8
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1185, 721)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Guna2Panel1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

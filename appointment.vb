@@ -1,3 +1,3 @@
-﻿Public Class appointment
+﻿Public Class frmAppointment
 
 End Class

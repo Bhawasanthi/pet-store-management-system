@@ -23,317 +23,344 @@ Partial Class frmadminDashBoard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.dropPnl1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.dropBtn1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn6 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn5 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn4 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn3 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn2 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn10 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn11 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn12 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn14 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btn13 = New Guna.UI2.WinForms.Guna2Button()
+        Me.pnlAdminNavigation = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnReport = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button9 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnOrder = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSupplier = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnInventory = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnService = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAppointment = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnCustomer = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnPet = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnEmployee = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnProduct = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLogout = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnServiceProduct = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pnlContainer = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTime = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Guna2Panel1.SuspendLayout()
-        Me.dropPnl1.SuspendLayout()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.pnlAdminNavigation.SuspendLayout()
+        Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Guna2Panel1
+        'pnlAdminNavigation
         '
-        Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Panel1.Controls.Add(Me.dropPnl1)
-        Me.Guna2Panel1.Controls.Add(Me.dropBtn1)
-        Me.Guna2Panel1.Controls.Add(Me.btn10)
-        Me.Guna2Panel1.Controls.Add(Me.btn11)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
-        Me.Guna2Panel1.Controls.Add(Me.btn12)
-        Me.Guna2Panel1.Controls.Add(Me.btn14)
-        Me.Guna2Panel1.Controls.Add(Me.btn13)
-        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(345, 830)
-        Me.Guna2Panel1.TabIndex = 0
+        Me.pnlAdminNavigation.BackColor = System.Drawing.Color.SkyBlue
+        Me.pnlAdminNavigation.Controls.Add(Me.btnReport)
+        Me.pnlAdminNavigation.Controls.Add(Me.Guna2Button9)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnOrder)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnSupplier)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnInventory)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnService)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnAppointment)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnCustomer)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnPet)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnEmployee)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnProduct)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnLogout)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnServiceProduct)
+        Me.pnlAdminNavigation.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlAdminNavigation.Location = New System.Drawing.Point(0, 0)
+        Me.pnlAdminNavigation.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.pnlAdminNavigation.Name = "pnlAdminNavigation"
+        Me.pnlAdminNavigation.Size = New System.Drawing.Size(248, 1051)
+        Me.pnlAdminNavigation.TabIndex = 0
         '
-        'dropPnl1
+        'btnReport
         '
-        Me.dropPnl1.BackColor = System.Drawing.Color.Transparent
-        Me.dropPnl1.Controls.Add(Me.btn6)
-        Me.dropPnl1.Controls.Add(Me.btn5)
-        Me.dropPnl1.Controls.Add(Me.btn4)
-        Me.dropPnl1.Controls.Add(Me.btn3)
-        Me.dropPnl1.Controls.Add(Me.btn2)
-        Me.dropPnl1.Controls.Add(Me.btn1)
-        Me.dropPnl1.Location = New System.Drawing.Point(295, 171)
-        Me.dropPnl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.dropPnl1.MaximumSize = New System.Drawing.Size(267, 511)
-        Me.dropPnl1.MinimumSize = New System.Drawing.Size(333, 54)
-        Me.dropPnl1.Name = "dropPnl1"
-        Me.dropPnl1.Size = New System.Drawing.Size(333, 54)
-        Me.dropPnl1.TabIndex = 2
+        Me.btnReport.Animated = True
+        Me.btnReport.AutoRoundedCorners = True
+        Me.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReport.FillColor = System.Drawing.Color.Transparent
+        Me.btnReport.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnReport.ForeColor = System.Drawing.Color.Black
+        Me.btnReport.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnReport.Location = New System.Drawing.Point(3, 771)
+        Me.btnReport.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(242, 38)
+        Me.btnReport.TabIndex = 12
+        Me.btnReport.Text = "Report"
         '
-        'dropBtn1
+        'Guna2Button9
         '
-        Me.dropBtn1.Animated = True
-        Me.dropBtn1.AutoRoundedCorners = True
-        Me.dropBtn1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.dropBtn1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.dropBtn1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.dropBtn1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.dropBtn1.FillColor = System.Drawing.Color.Gray
-        Me.dropBtn1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.dropBtn1.ForeColor = System.Drawing.Color.White
-        Me.dropBtn1.Image = Global.pet_store_management_system.My.Resources.Resources.download__2_3
-        Me.dropBtn1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.dropBtn1.Location = New System.Drawing.Point(-44, 171)
-        Me.dropBtn1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.dropBtn1.Name = "dropBtn1"
-        Me.dropBtn1.Size = New System.Drawing.Size(333, 54)
-        Me.dropBtn1.TabIndex = 2
-        Me.dropBtn1.Text = "Guna2Button9"
+        Me.Guna2Button9.Animated = True
+        Me.Guna2Button9.AutoRoundedCorners = True
+        Me.Guna2Button9.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button9.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button9.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Guna2Button9.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button9.HoverState.FillColor = System.Drawing.Color.White
+        Me.Guna2Button9.Location = New System.Drawing.Point(3, 168)
+        Me.Guna2Button9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Guna2Button9.Name = "Guna2Button9"
+        Me.Guna2Button9.Size = New System.Drawing.Size(242, 38)
+        Me.Guna2Button9.TabIndex = 1
+        Me.Guna2Button9.Text = "Home"
         '
-        'btn6
+        'btnOrder
         '
-        Me.btn6.Animated = True
-        Me.btn6.AutoRoundedCorners = True
-        Me.btn6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn6.FillColor = System.Drawing.Color.Gray
-        Me.btn6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn6.ForeColor = System.Drawing.Color.White
-        Me.btn6.Location = New System.Drawing.Point(29, 356)
-        Me.btn6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn6.Name = "btn6"
-        Me.btn6.Size = New System.Drawing.Size(243, 54)
-        Me.btn6.TabIndex = 8
-        Me.btn6.Text = "Guna2Button15"
-        Me.btn6.Visible = False
+        Me.btnOrder.Animated = True
+        Me.btnOrder.AutoRoundedCorners = True
+        Me.btnOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnOrder.FillColor = System.Drawing.Color.Transparent
+        Me.btnOrder.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnOrder.ForeColor = System.Drawing.Color.Black
+        Me.btnOrder.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnOrder.Location = New System.Drawing.Point(3, 668)
+        Me.btnOrder.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.Size = New System.Drawing.Size(242, 38)
+        Me.btnOrder.TabIndex = 10
+        Me.btnOrder.Text = "Order"
         '
-        'btn5
+        'btnSupplier
         '
-        Me.btn5.Animated = True
-        Me.btn5.AutoRoundedCorners = True
-        Me.btn5.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn5.FillColor = System.Drawing.Color.Gray
-        Me.btn5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn5.ForeColor = System.Drawing.Color.White
-        Me.btn5.Location = New System.Drawing.Point(29, 297)
-        Me.btn5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn5.Name = "btn5"
-        Me.btn5.Size = New System.Drawing.Size(243, 54)
-        Me.btn5.TabIndex = 7
-        Me.btn5.Text = "Guna2Button14"
-        Me.btn5.Visible = False
+        Me.btnSupplier.Animated = True
+        Me.btnSupplier.AutoRoundedCorners = True
+        Me.btnSupplier.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSupplier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSupplier.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSupplier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSupplier.FillColor = System.Drawing.Color.Transparent
+        Me.btnSupplier.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnSupplier.ForeColor = System.Drawing.Color.Black
+        Me.btnSupplier.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnSupplier.Location = New System.Drawing.Point(3, 609)
+        Me.btnSupplier.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnSupplier.Name = "btnSupplier"
+        Me.btnSupplier.Size = New System.Drawing.Size(239, 38)
+        Me.btnSupplier.TabIndex = 9
+        Me.btnSupplier.Text = "Transactions"
         '
-        'btn4
+        'btnInventory
         '
-        Me.btn4.Animated = True
-        Me.btn4.AutoRoundedCorners = True
-        Me.btn4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn4.FillColor = System.Drawing.Color.Gray
-        Me.btn4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn4.ForeColor = System.Drawing.Color.White
-        Me.btn4.Location = New System.Drawing.Point(29, 238)
-        Me.btn4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn4.Name = "btn4"
-        Me.btn4.Size = New System.Drawing.Size(243, 54)
-        Me.btn4.TabIndex = 6
-        Me.btn4.Text = "Guna2Button13"
-        Me.btn4.Visible = False
+        Me.btnInventory.Animated = True
+        Me.btnInventory.AutoRoundedCorners = True
+        Me.btnInventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnInventory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnInventory.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnInventory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnInventory.FillColor = System.Drawing.Color.Transparent
+        Me.btnInventory.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnInventory.ForeColor = System.Drawing.Color.Black
+        Me.btnInventory.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnInventory.Location = New System.Drawing.Point(3, 719)
+        Me.btnInventory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnInventory.Name = "btnInventory"
+        Me.btnInventory.Size = New System.Drawing.Size(242, 38)
+        Me.btnInventory.TabIndex = 11
+        Me.btnInventory.Text = "Inventory"
         '
-        'btn3
+        'btnService
         '
-        Me.btn3.Animated = True
-        Me.btn3.AutoRoundedCorners = True
-        Me.btn3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn3.FillColor = System.Drawing.Color.Gray
-        Me.btn3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn3.ForeColor = System.Drawing.Color.White
-        Me.btn3.Location = New System.Drawing.Point(29, 178)
-        Me.btn3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn3.Name = "btn3"
-        Me.btn3.Size = New System.Drawing.Size(243, 54)
-        Me.btn3.TabIndex = 5
-        Me.btn3.Text = "Guna2Button12"
-        Me.btn3.Visible = False
+        Me.btnService.Animated = True
+        Me.btnService.AutoRoundedCorners = True
+        Me.btnService.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnService.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnService.FillColor = System.Drawing.Color.Transparent
+        Me.btnService.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnService.ForeColor = System.Drawing.Color.Black
+        Me.btnService.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnService.Location = New System.Drawing.Point(3, 500)
+        Me.btnService.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnService.Name = "btnService"
+        Me.btnService.Size = New System.Drawing.Size(242, 38)
+        Me.btnService.TabIndex = 7
+        Me.btnService.Text = "Service"
         '
-        'btn2
+        'btnAppointment
         '
-        Me.btn2.Animated = True
-        Me.btn2.AutoRoundedCorners = True
-        Me.btn2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn2.FillColor = System.Drawing.Color.Gray
-        Me.btn2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn2.ForeColor = System.Drawing.Color.White
-        Me.btn2.Location = New System.Drawing.Point(29, 119)
-        Me.btn2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn2.Name = "btn2"
-        Me.btn2.Size = New System.Drawing.Size(243, 54)
-        Me.btn2.TabIndex = 4
-        Me.btn2.Text = "Guna2Button11"
-        Me.btn2.Visible = False
+        Me.btnAppointment.Animated = True
+        Me.btnAppointment.AutoRoundedCorners = True
+        Me.btnAppointment.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAppointment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAppointment.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAppointment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAppointment.FillColor = System.Drawing.Color.Transparent
+        Me.btnAppointment.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnAppointment.ForeColor = System.Drawing.Color.Black
+        Me.btnAppointment.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnAppointment.Location = New System.Drawing.Point(3, 555)
+        Me.btnAppointment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAppointment.Name = "btnAppointment"
+        Me.btnAppointment.Size = New System.Drawing.Size(242, 38)
+        Me.btnAppointment.TabIndex = 8
+        Me.btnAppointment.Text = "Appointment"
         '
-        'btn1
+        'btnCustomer
         '
-        Me.btn1.Animated = True
-        Me.btn1.AutoRoundedCorners = True
-        Me.btn1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn1.FillColor = System.Drawing.Color.Gray
-        Me.btn1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn1.ForeColor = System.Drawing.Color.White
-        Me.btn1.Location = New System.Drawing.Point(29, 59)
-        Me.btn1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn1.Name = "btn1"
-        Me.btn1.Size = New System.Drawing.Size(243, 55)
-        Me.btn1.TabIndex = 3
-        Me.btn1.Text = "Guna2Button10"
-        Me.btn1.Visible = False
+        Me.btnCustomer.Animated = True
+        Me.btnCustomer.AutoRoundedCorners = True
+        Me.btnCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnCustomer.FillColor = System.Drawing.Color.Transparent
+        Me.btnCustomer.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnCustomer.ForeColor = System.Drawing.Color.Black
+        Me.btnCustomer.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnCustomer.Location = New System.Drawing.Point(3, 283)
+        Me.btnCustomer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnCustomer.Name = "btnCustomer"
+        Me.btnCustomer.Size = New System.Drawing.Size(242, 38)
+        Me.btnCustomer.TabIndex = 3
+        Me.btnCustomer.Text = "Customer"
         '
-        'btn10
+        'btnPet
         '
-        Me.btn10.Animated = True
-        Me.btn10.AutoRoundedCorners = True
-        Me.btn10.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn10.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn10.FillColor = System.Drawing.Color.Gray
-        Me.btn10.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn10.ForeColor = System.Drawing.Color.White
-        Me.btn10.Location = New System.Drawing.Point(-34, 229)
-        Me.btn10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn10.Name = "btn10"
-        Me.btn10.Size = New System.Drawing.Size(323, 54)
-        Me.btn10.TabIndex = 13
-        Me.btn10.Text = "Guna2Button4"
+        Me.btnPet.Animated = True
+        Me.btnPet.AutoRoundedCorners = True
+        Me.btnPet.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnPet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnPet.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnPet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnPet.FillColor = System.Drawing.Color.Transparent
+        Me.btnPet.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnPet.ForeColor = System.Drawing.Color.Black
+        Me.btnPet.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnPet.Location = New System.Drawing.Point(3, 339)
+        Me.btnPet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnPet.Name = "btnPet"
+        Me.btnPet.Size = New System.Drawing.Size(242, 38)
+        Me.btnPet.TabIndex = 4
+        Me.btnPet.Text = "Pet"
         '
-        'btn11
+        'btnEmployee
         '
-        Me.btn11.Animated = True
-        Me.btn11.AutoRoundedCorners = True
-        Me.btn11.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn11.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn11.FillColor = System.Drawing.Color.Gray
-        Me.btn11.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn11.ForeColor = System.Drawing.Color.White
-        Me.btn11.Location = New System.Drawing.Point(-34, 289)
-        Me.btn11.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn11.Name = "btn11"
-        Me.btn11.Size = New System.Drawing.Size(323, 54)
-        Me.btn11.TabIndex = 12
-        Me.btn11.Text = "Guna2Button3"
+        Me.btnEmployee.Animated = True
+        Me.btnEmployee.AutoRoundedCorners = True
+        Me.btnEmployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnEmployee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnEmployee.FillColor = System.Drawing.Color.Transparent
+        Me.btnEmployee.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnEmployee.ForeColor = System.Drawing.Color.Black
+        Me.btnEmployee.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnEmployee.Location = New System.Drawing.Point(3, 228)
+        Me.btnEmployee.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnEmployee.Name = "btnEmployee"
+        Me.btnEmployee.Size = New System.Drawing.Size(242, 38)
+        Me.btnEmployee.TabIndex = 2
+        Me.btnEmployee.Text = "Employee"
         '
-        'Guna2Button2
+        'btnProduct
         '
-        Me.Guna2Button2.Animated = True
-        Me.Guna2Button2.AutoRoundedCorners = True
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.Gray
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(-34, 115)
-        Me.Guna2Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(323, 54)
-        Me.Guna2Button2.TabIndex = 1
-        Me.Guna2Button2.Text = "Guna2Button2"
+        Me.btnProduct.Animated = True
+        Me.btnProduct.AutoRoundedCorners = True
+        Me.btnProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnProduct.FillColor = System.Drawing.Color.Transparent
+        Me.btnProduct.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnProduct.ForeColor = System.Drawing.Color.Black
+        Me.btnProduct.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnProduct.Location = New System.Drawing.Point(3, 393)
+        Me.btnProduct.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnProduct.Name = "btnProduct"
+        Me.btnProduct.Size = New System.Drawing.Size(242, 38)
+        Me.btnProduct.TabIndex = 5
+        Me.btnProduct.Text = "Product"
         '
-        'btn12
+        'btnLogout
         '
-        Me.btn12.Animated = True
-        Me.btn12.AutoRoundedCorners = True
-        Me.btn12.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn12.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn12.FillColor = System.Drawing.Color.Gray
-        Me.btn12.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn12.ForeColor = System.Drawing.Color.White
-        Me.btn12.Location = New System.Drawing.Point(-34, 347)
-        Me.btn12.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn12.Name = "btn12"
-        Me.btn12.Size = New System.Drawing.Size(323, 54)
-        Me.btn12.TabIndex = 11
-        Me.btn12.Text = "Guna2Button1"
+        Me.btnLogout.Animated = True
+        Me.btnLogout.AutoRoundedCorners = True
+        Me.btnLogout.BackColor = System.Drawing.Color.Transparent
+        Me.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogout.FillColor = System.Drawing.Color.Transparent
+        Me.btnLogout.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnLogout.ForeColor = System.Drawing.Color.Black
+        Me.btnLogout.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnLogout.Location = New System.Drawing.Point(3, 926)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(242, 38)
+        Me.btnLogout.TabIndex = 13
+        Me.btnLogout.Text = "Log Out"
         '
-        'btn14
+        'btnServiceProduct
         '
-        Me.btn14.Animated = True
-        Me.btn14.AutoRoundedCorners = True
-        Me.btn14.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn14.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn14.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn14.FillColor = System.Drawing.Color.Gray
-        Me.btn14.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn14.ForeColor = System.Drawing.Color.White
-        Me.btn14.Location = New System.Drawing.Point(-24, 602)
-        Me.btn14.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn14.Name = "btn14"
-        Me.btn14.Size = New System.Drawing.Size(323, 54)
-        Me.btn14.TabIndex = 10
-        Me.btn14.Text = "Guna2Button16"
-        '
-        'btn13
-        '
-        Me.btn13.Animated = True
-        Me.btn13.AutoRoundedCorners = True
-        Me.btn13.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btn13.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btn13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn13.FillColor = System.Drawing.Color.Gray
-        Me.btn13.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btn13.ForeColor = System.Drawing.Color.White
-        Me.btn13.Location = New System.Drawing.Point(-34, 405)
-        Me.btn13.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn13.Name = "btn13"
-        Me.btn13.Size = New System.Drawing.Size(323, 54)
-        Me.btn13.TabIndex = 8
-        Me.btn13.Text = "Log Out "
+        Me.btnServiceProduct.Animated = True
+        Me.btnServiceProduct.AutoRoundedCorners = True
+        Me.btnServiceProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnServiceProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnServiceProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnServiceProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnServiceProduct.FillColor = System.Drawing.Color.Transparent
+        Me.btnServiceProduct.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnServiceProduct.ForeColor = System.Drawing.Color.Black
+        Me.btnServiceProduct.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnServiceProduct.Location = New System.Drawing.Point(3, 447)
+        Me.btnServiceProduct.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnServiceProduct.Name = "btnServiceProduct"
+        Me.btnServiceProduct.Size = New System.Drawing.Size(242, 38)
+        Me.btnServiceProduct.TabIndex = 6
+        Me.btnServiceProduct.Text = "Service Product"
         '
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.Guna2Panel2.Controls.Add(Me.lblDate)
+        Me.Guna2Panel2.Controls.Add(Me.lblTime)
         Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel2.Location = New System.Drawing.Point(345, 0)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(248, 0)
         Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(944, 57)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(1413, 57)
         Me.Guna2Panel2.TabIndex = 1
+        '
+        'pnlContainer
+        '
+        Me.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlContainer.Location = New System.Drawing.Point(248, 57)
+        Me.pnlContainer.Name = "pnlContainer"
+        Me.pnlContainer.Size = New System.Drawing.Size(1413, 994)
+        Me.pnlContainer.TabIndex = 2
+        '
+        'lblTime
+        '
+        Me.lblTime.AutoSize = True
+        Me.lblTime.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTime.Location = New System.Drawing.Point(313, 20)
+        Me.lblTime.Name = "lblTime"
+        Me.lblTime.Size = New System.Drawing.Size(78, 23)
+        Me.lblTime.TabIndex = 83
+        Me.lblTime.Text = "Label12"
         '
         'Timer1
         '
-        Me.Timer1.Interval = 15
+        Me.Timer1.Interval = 1000
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.Location = New System.Drawing.Point(100, 20)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(68, 23)
+        Me.lblDate.TabIndex = 84
+        Me.lblDate.Text = "Label1"
         '
         'frmadminDashBoard
         '
@@ -341,36 +368,41 @@ Partial Class frmadminDashBoard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1289, 830)
+        Me.ClientSize = New System.Drawing.Size(1661, 1051)
+        Me.Controls.Add(Me.pnlContainer)
         Me.Controls.Add(Me.Guna2Panel2)
-        Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.pnlAdminNavigation)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmadminDashBoard"
         Me.Text = " "
-        Me.Guna2Panel1.ResumeLayout(False)
-        Me.dropPnl1.ResumeLayout(False)
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.pnlAdminNavigation.ResumeLayout(False)
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents pnlAdminNavigation As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn13 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents dropPnl1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents dropBtn1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn6 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn5 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn4 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn3 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn10 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn11 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn12 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn14 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnEmployee As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnServiceProduct As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnCustomer As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnPet As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnProduct As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnReport As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnOrder As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSupplier As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnInventory As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnService As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAppointment As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button9 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents pnlContainer As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblTime As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents lblDate As Label
 End Class

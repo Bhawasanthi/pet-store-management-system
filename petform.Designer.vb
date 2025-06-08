@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class petform
+Partial Class frmPet
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -32,16 +32,12 @@ Partial Class petform
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtColor = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtAge = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtSupplierId = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPrice = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPetimagePath = New Guna.UI2.WinForms.Guna2TextBox()
         Me.cmbType = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cmbBreed = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cmbAvailability = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.cmbHealthStatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.rbMale = New System.Windows.Forms.RadioButton()
         Me.rbFemale = New System.Windows.Forms.RadioButton()
@@ -167,17 +163,6 @@ Partial Class petform
         Me.Label10.TabIndex = 10
         Me.Label10.Text = "Color"
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(32, 764)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(105, 23)
-        Me.Label11.TabIndex = 11
-        Me.Label11.Text = "Supplier ID"
-        '
         'txtColor
         '
         Me.txtColor.BorderColor = System.Drawing.Color.Black
@@ -197,7 +182,7 @@ Partial Class petform
         Me.txtColor.PlaceholderText = ""
         Me.txtColor.SelectedText = ""
         Me.txtColor.Size = New System.Drawing.Size(273, 51)
-        Me.txtColor.TabIndex = 14
+        Me.txtColor.TabIndex = 4
         '
         'txtAge
         '
@@ -218,28 +203,7 @@ Partial Class petform
         Me.txtAge.PlaceholderText = ""
         Me.txtAge.SelectedText = ""
         Me.txtAge.Size = New System.Drawing.Size(273, 51)
-        Me.txtAge.TabIndex = 15
-        '
-        'txtSupplierId
-        '
-        Me.txtSupplierId.BorderColor = System.Drawing.Color.Black
-        Me.txtSupplierId.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtSupplierId.DefaultText = ""
-        Me.txtSupplierId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtSupplierId.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtSupplierId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtSupplierId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtSupplierId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSupplierId.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSupplierId.ForeColor = System.Drawing.Color.Black
-        Me.txtSupplierId.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSupplierId.Location = New System.Drawing.Point(172, 746)
-        Me.txtSupplierId.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtSupplierId.Name = "txtSupplierId"
-        Me.txtSupplierId.PlaceholderText = ""
-        Me.txtSupplierId.SelectedText = ""
-        Me.txtSupplierId.Size = New System.Drawing.Size(273, 51)
-        Me.txtSupplierId.TabIndex = 19
+        Me.txtAge.TabIndex = 5
         '
         'txtPrice
         '
@@ -297,7 +261,7 @@ Partial Class petform
         Me.cmbType.Location = New System.Drawing.Point(172, 246)
         Me.cmbType.Name = "cmbType"
         Me.cmbType.Size = New System.Drawing.Size(273, 36)
-        Me.cmbType.TabIndex = 22
+        Me.cmbType.TabIndex = 2
         '
         'cmbBreed
         '
@@ -314,35 +278,7 @@ Partial Class petform
         Me.cmbBreed.Location = New System.Drawing.Point(172, 325)
         Me.cmbBreed.Name = "cmbBreed"
         Me.cmbBreed.Size = New System.Drawing.Size(273, 36)
-        Me.cmbBreed.TabIndex = 23
-        '
-        'cmbAvailability
-        '
-        Me.cmbAvailability.BackColor = System.Drawing.Color.Transparent
-        Me.cmbAvailability.BorderColor = System.Drawing.Color.Black
-        Me.cmbAvailability.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbAvailability.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbAvailability.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbAvailability.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbAvailability.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.cmbAvailability.ForeColor = System.Drawing.Color.Black
-        Me.cmbAvailability.ItemHeight = 30
-        Me.cmbAvailability.Items.AddRange(New Object() {"Available", "Sold", "Reserved"})
-        Me.cmbAvailability.Location = New System.Drawing.Point(172, 833)
-        Me.cmbAvailability.Name = "cmbAvailability"
-        Me.cmbAvailability.Size = New System.Drawing.Size(273, 36)
-        Me.cmbAvailability.TabIndex = 24
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(32, 846)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(105, 23)
-        Me.Label12.TabIndex = 25
-        Me.Label12.Text = "Availability"
+        Me.cmbBreed.TabIndex = 3
         '
         'cmbHealthStatus
         '
@@ -359,7 +295,7 @@ Partial Class petform
         Me.cmbHealthStatus.Location = New System.Drawing.Point(172, 599)
         Me.cmbHealthStatus.Name = "cmbHealthStatus"
         Me.cmbHealthStatus.Size = New System.Drawing.Size(273, 36)
-        Me.cmbHealthStatus.TabIndex = 26
+        Me.cmbHealthStatus.TabIndex = 8
         '
         'rbMale
         '
@@ -369,7 +305,7 @@ Partial Class petform
         Me.rbMale.Location = New System.Drawing.Point(172, 545)
         Me.rbMale.Name = "rbMale"
         Me.rbMale.Size = New System.Drawing.Size(74, 27)
-        Me.rbMale.TabIndex = 28
+        Me.rbMale.TabIndex = 6
         Me.rbMale.TabStop = True
         Me.rbMale.Text = "Male"
         Me.rbMale.UseVisualStyleBackColor = False
@@ -382,7 +318,7 @@ Partial Class petform
         Me.rbFemale.Location = New System.Drawing.Point(353, 545)
         Me.rbFemale.Name = "rbFemale"
         Me.rbFemale.Size = New System.Drawing.Size(92, 27)
-        Me.rbFemale.TabIndex = 29
+        Me.rbFemale.TabIndex = 7
         Me.rbFemale.TabStop = True
         Me.rbFemale.Text = "Female"
         Me.rbFemale.UseVisualStyleBackColor = False
@@ -535,7 +471,7 @@ Partial Class petform
         Me.txtID.PlaceholderText = ""
         Me.txtID.SelectedText = ""
         Me.txtID.Size = New System.Drawing.Size(273, 51)
-        Me.txtID.TabIndex = 35
+        Me.txtID.TabIndex = 1
         '
         'DataGridView1
         '
@@ -547,7 +483,7 @@ Partial Class petform
         Me.DataGridView1.Size = New System.Drawing.Size(1198, 513)
         Me.DataGridView1.TabIndex = 38
         '
-        'petform
+        'frmPet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -567,16 +503,12 @@ Partial Class petform
         Me.Controls.Add(Me.rbFemale)
         Me.Controls.Add(Me.rbMale)
         Me.Controls.Add(Me.cmbHealthStatus)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.cmbAvailability)
         Me.Controls.Add(Me.cmbBreed)
         Me.Controls.Add(Me.cmbType)
         Me.Controls.Add(Me.txtPetimagePath)
         Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.txtSupplierId)
         Me.Controls.Add(Me.txtAge)
         Me.Controls.Add(Me.txtColor)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -588,7 +520,7 @@ Partial Class petform
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Name = "petform"
+        Me.Name = "frmPet"
         Me.Text = "Gender"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
@@ -609,16 +541,12 @@ Partial Class petform
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents txtColor As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtAge As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents txtSupplierId As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtPrice As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtPetimagePath As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cmbType As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cmbBreed As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents cmbAvailability As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Label12 As Label
     Friend WithEvents cmbHealthStatus As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents rbMale As RadioButton
     Friend WithEvents rbFemale As RadioButton

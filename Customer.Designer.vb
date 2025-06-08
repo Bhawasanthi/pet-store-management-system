@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Customer
+Partial Class frmCustomer
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -182,11 +182,11 @@ Partial Class Customer
         Me.Label4.TabIndex = 45
         Me.Label4.Text = "Address"
         '
-        'Customer
+        'frmCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1924, 958)
+        Me.ClientSize = New System.Drawing.Size(1389, 942)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Guna2TextBox3)
         Me.Controls.Add(Me.Guna2TextBox2)
@@ -196,8 +196,9 @@ Partial Class Customer
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Customer"
+        Me.Name = "frmCustomer"
         Me.Text = "Customer"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

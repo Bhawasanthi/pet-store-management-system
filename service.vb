@@ -1,3 +1,3 @@
-﻿Public Class service
+﻿Public Class frmService
 
 End Class

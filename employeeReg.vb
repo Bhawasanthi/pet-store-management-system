@@ -3,7 +3,7 @@ Imports System.Transactions
 Imports MySql.Data.MySqlClient
 
 
-Public Class employeeReg
+Public Class frmemployeeReg
     Dim con As New MySqlConnection("Server=localhost;Database=psms;User Id=root;Password=;")
 
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click

@@ -50,4 +50,6 @@
             txtPassword.UseSystemPasswordChar = True
         End If
     End Sub
+
+
 End Class

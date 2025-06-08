@@ -1,4 +1,4 @@
-﻿Public Class petform
+﻿Public Class frmPet
     ' Dictionary to store pet types and corresponding breeds
     Private petBreeds As New Dictionary(Of String, List(Of String)) From {
         {"Dog", New List(Of String) From {"Geraman Shepherd", "Bull Dog", "Labrador Retriever", "Golden Retriever", "Duchshund", "Rottweiler", "Boxer", "Pomeranian"}},

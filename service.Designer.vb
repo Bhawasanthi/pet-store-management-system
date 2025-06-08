@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class service
+Partial Class frmService
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -121,11 +121,11 @@ Partial Class service
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 368)
+        Me.Label2.Location = New System.Drawing.Point(37, 366)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(165, 23)
+        Me.Label2.Size = New System.Drawing.Size(140, 23)
         Me.Label2.TabIndex = 42
-        Me.Label2.Text = "Charge for 1 Hour"
+        Me.Label2.Text = "Service Charge"
         '
         'Guna2TextBox1
         '
@@ -208,7 +208,7 @@ Partial Class service
         Me.cmbAvailability.Size = New System.Drawing.Size(273, 36)
         Me.cmbAvailability.TabIndex = 48
         '
-        'service
+        'frmService
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -224,7 +224,7 @@ Partial Class service
         Me.Controls.Add(Me.cmbType)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.Label14)
-        Me.Name = "service"
+        Me.Name = "frmService"
         Me.Text = "service"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
