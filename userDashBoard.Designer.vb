@@ -27,6 +27,7 @@ Partial Class userDashBoard
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pnlUserContainer = New Guna.UI2.WinForms.Guna2Panel()
         Me.btn10 = New Guna.UI2.WinForms.Guna2Button()
         Me.btn11 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
@@ -41,10 +42,11 @@ Partial Class userDashBoard
         Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.Guna2Panel2.Controls.Add(Me.lblDate)
         Me.Guna2Panel2.Controls.Add(Me.lblTime)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(254, 0)
+        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel2.Location = New System.Drawing.Point(256, 0)
         Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(1169, 57)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(1409, 57)
         Me.Guna2Panel2.TabIndex = 2
         '
         'lblDate
@@ -158,6 +160,14 @@ Partial Class userDashBoard
         Me.btn14.TabIndex = 10
         Me.btn14.Text = "Log Out"
         '
+        'pnlUserContainer
+        '
+        Me.pnlUserContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlUserContainer.Location = New System.Drawing.Point(256, 57)
+        Me.pnlUserContainer.Name = "pnlUserContainer"
+        Me.pnlUserContainer.Size = New System.Drawing.Size(1409, 998)
+        Me.pnlUserContainer.TabIndex = 4
+        '
         'Timer2
         '
         Me.Timer2.Interval = 1000
@@ -168,8 +178,9 @@ Partial Class userDashBoard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1665, 1055)
-        Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.pnlUserContainer)
         Me.Controls.Add(Me.Guna2Panel2)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Name = "userDashBoard"
         Me.Text = "userDashBoard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -182,6 +193,7 @@ Partial Class userDashBoard
 
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents pnlUserContainer As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btn10 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btn11 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
