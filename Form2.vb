@@ -1,40 +1,34 @@
 ﻿Public Class frmLogin
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         'TestConnection()
-        Dim usersTable As DataTable = LoadUser()
+        Dim employeeTable As DataTable = LoadEmployee()
 
         Dim userRole As String = ""
         Dim userName As String = ""
 
-        For Each row As DataRow In usersTable.Rows
-            If row("username").ToString() = txtUserName.Text.Trim() AndAlso
+        For Each row As DataRow In employeeTable.Rows
+            If row("userName").ToString() = txtUserName.Text.Trim() AndAlso
                row("password").ToString() = txtPassword.Text.Trim() Then
 
-                userRole = row("role").ToString()
-                userName = row("username").ToString()
+                userRole = row("position").ToString()
+                userName = row("userName").ToString()
 
                 Exit For
             End If
         Next
 
-        If userRole = "Admin" Then
-
-
-
+        If userRole.Equals("Admin", StringComparison.OrdinalIgnoreCase) Then
             ' Open dashboard and pass role if needed
             Dim adminDashBoard As New frmadminDashBoard()
-            adminDashBoard.UserRole = userRole ' This should be a public property in frmDashboard
-            adminDashBoard.UserName = userName ' Optional
+            adminDashBoard.UserRole = userRole
+            adminDashBoard.UserName = userName
             adminDashBoard.Show()
             Me.Hide()
-        ElseIf userRole = "User" Then
-
-
-
-            ' Open dashboard and pass role if needed
-            Dim dashboard As New UserDashboard()
-            dashboard.UserRole = userRole ' This should be a public property in frmDashboard
-            dashboard.UserName = userName ' Optional
+        ElseIf Not String.IsNullOrEmpty(userRole) Then
+            ' Open user dashboard for other roles (e.g., cashier)
+            Dim dashboard As New userDashBoard()
+            dashboard.UserRole = userRole
+            dashboard.UserName = userName
             dashboard.Show()
             Me.Hide()
         Else
