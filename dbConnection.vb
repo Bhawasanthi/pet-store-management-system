@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 
 Module dbConnection
 
@@ -8,20 +8,24 @@ Module dbConnection
         Dim conn As New MySqlConnection(connString)
         Try
             conn.Open()
-            'MessageBox.Show("Connectiion Successfull!")
+            Return conn
         Catch ex As Exception
             MessageBox.Show("Database Connection Failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If conn IsNot Nothing Then
+                If conn.State <> ConnectionState.Closed Then conn.Close()
+                conn.Dispose()
+            End If
+            Return Nothing
         End Try
-        Return conn
     End Function
 
     Public Function TestConnection() As Boolean
-        Using conn As MySqlConnection = GetConnection()
-            Try
-                Return True
-            Catch ex As Exception
-                Return False
-            End Try
-        End Using
+        Try
+            Using conn As MySqlConnection = GetConnection()
+                Return conn IsNot Nothing AndAlso conn.State = ConnectionState.Open
+            End Using
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 End Module

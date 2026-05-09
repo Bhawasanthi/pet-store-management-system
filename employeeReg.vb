@@ -1,82 +1,81 @@
-﻿Imports System.IO
+Imports System.IO
 Imports System.Transactions
 Imports MySql.Data.MySqlClient
 
 
 Public Class frmemployeeReg
-    Dim con As New MySqlConnection("Server=localhost;Database=psms;User Id=root;Password=;")
-
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
-        OpenFileDialog1.ShowDialog()
-        txtimage_path.Text = Path.GetDirectoryName(OpenFileDialog1.FileName) & "\" & Path.GetFileName(OpenFileDialog1.FileName)
-        pictureBox.Image = Image.FromFile(txtimage_path.Text)
-
+        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            txtimage_path.Text = OpenFileDialog1.FileName
+            pictureBox.Image = Image.FromFile(txtimage_path.Text)
+        End If
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        Try
-            con.Open()
-            Dim transaction As MySqlTransaction = con.BeginTransaction()
+        Using con As MySqlConnection = GetConnection()
+            If con IsNot Nothing AndAlso con.State = ConnectionState.Open Then
+                Dim transaction As MySqlTransaction = con.BeginTransaction()
+                Try
+                    ' Insert into employee table
+                    Dim empQuery As String = "INSERT INTO employee (full_name, contact_number, email, gender, date_of_birth, position, salary, date_of_hired, image) VALUES (@fullname, @contact_number, @email, @gender, @date_of_birth, @position, @salary, @date_of_hired, @image)"
+                    Using empCmd As New MySqlCommand(empQuery, con, transaction)
+                        empCmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim())
+                        empCmd.Parameters.AddWithValue("@contact_number", txtContactNumber.Text.Trim())
+                        empCmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim())
+                        empCmd.Parameters.AddWithValue("@position", txtPosition.Text.Trim())
+                        empCmd.Parameters.AddWithValue("@salary", If(IsNumeric(txtSalary.Text), Convert.ToDecimal(txtSalary.Text), 0))
+                        empCmd.Parameters.AddWithValue("@date_of_birth", dtpDOB.Value.Date)
+                        empCmd.Parameters.AddWithValue("@date_of_hired", dtpDateHired.Value.Date)
 
-            ' Insert into employee table
-            Dim empCmd As New MySqlCommand("INSERT INTO employee (full_name, contact_number, email, gender, date_of_birth, position, salary, date_of_hired, image) VALUES (@fullname, @contact_number, @email, @gender, @date_of_birth, @position, @salary, @date_of_hired, @image)", con, transaction)
+                        Dim gender As String = If(rbMale.Checked, "Male", If(rbFemale.Checked, "Female", ""))
+                        If gender = "" Then
+                            MessageBox.Show("Please select a gender.")
+                            Return
+                        End If
+                        empCmd.Parameters.AddWithValue("@gender", gender)
 
+                        ' Convert image to byte array correctly
+                        If pictureBox.Image Is Nothing Then
+                            MessageBox.Show("Please select an image.")
+                            Return
+                        End If
+                        Using ms As New MemoryStream()
+                            pictureBox.Image.Save(ms, pictureBox.Image.RawFormat)
+                            empCmd.Parameters.AddWithValue("@image", ms.ToArray())
+                        End Using
 
-            empCmd.Parameters.AddWithValue("@fullname", txtFullName.Text)
-            empCmd.Parameters.AddWithValue("@contact_number", txtContactNumber.Text)
-            empCmd.Parameters.AddWithValue("@email", txtEmail.Text)
-            empCmd.Parameters.AddWithValue("@position", txtPosition.Text)
-            empCmd.Parameters.AddWithValue("@salary", Convert.ToDecimal(txtSalary.Text))
-            empCmd.Parameters.AddWithValue("@date_of_birth", dtpDOB.Value.Date)
-            empCmd.Parameters.AddWithValue("@date_of_hired", dtpDateHired.Value.Date)
+                        empCmd.ExecuteNonQuery()
 
+                        ' Get the last inserted employee ID
+                        Dim employeeId As Long = empCmd.LastInsertedId
 
-            Dim gender As String = If(rbMale.Checked, "Male", If(rbFemale.Checked, "Female", ""))
-            If gender = "" Then
-                MessageBox.Show("Please select a gender.")
-                Exit Sub
+                        ' Insert into users table including the role and required fields from schema
+                        ' Based on psms.sql: sqes, answer, changeDate_Time, oldPassword are NOT NULL
+                        Dim userQuery As String = "INSERT INTO users (username, password, role, employee_id, sqes, answer, changeDate_Time, oldPassword) " &
+                                                  "VALUES (@Username, @Password, @Role, @EmployeeID, @sqes, @answer, @changeDate_Time, @oldPassword)"
+                        Using userCmd As New MySqlCommand(userQuery, con, transaction)
+                            userCmd.Parameters.AddWithValue("@Username", txtUserName.Text.Trim())
+                            userCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim())
+                            userCmd.Parameters.AddWithValue("@Role", txtPosition.Text.Trim())
+                            userCmd.Parameters.AddWithValue("@EmployeeID", employeeId)
+                            ' Provide default values for other NOT NULL columns if not in UI
+                            userCmd.Parameters.AddWithValue("@sqes", "")
+                            userCmd.Parameters.AddWithValue("@answer", "")
+                            userCmd.Parameters.AddWithValue("@changeDate_Time", DateTime.Now.ToString())
+                            userCmd.Parameters.AddWithValue("@oldPassword", txtPassword.Text.Trim())
+
+                            userCmd.ExecuteNonQuery()
+                        End Using
+
+                        transaction.Commit()
+                        MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End Using
+                Catch ex As Exception
+                    If transaction IsNot Nothing Then transaction.Rollback()
+                    MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
             End If
-            empCmd.Parameters.AddWithValue("@gender", gender)
-
-
-            ' Convert image to byte array
-            Dim ms As New MemoryStream()
-            If pictureBox.Image Is Nothing Then
-                MessageBox.Show("Please select an image.")
-                Exit Sub
-            End If
-            empCmd.Parameters.AddWithValue("@image", ms.ToArray())
-
-            empCmd.ExecuteNonQuery()
-
-            ' Get the last inserted employee ID
-
-            Dim employeeId As Long = empCmd.LastInsertedId
-            If empCmd.LastInsertedId = 0 Then
-                MessageBox.Show("Failed to retrieve employee ID. Ensure 'employee_id' is AUTO_INCREMENT.")
-                transaction.Rollback()
-                Exit Sub
-            End If
-
-
-
-
-            ' Insert into users table
-            Dim userCmd As New MySqlCommand("INSERT INTO users (username, password, employee_id) VALUES (@Username, @Password, @EmployeeID)", con, transaction)
-            userCmd.Parameters.AddWithValue("@Username", txtUserName.Text)
-            userCmd.Parameters.AddWithValue("@Password", txtPassword.Text)
-            userCmd.Parameters.AddWithValue("@EmployeeID", employeeId)
-
-            userCmd.ExecuteNonQuery()
-
-            transaction.Commit()
-            MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-
-            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            con.Close()
-        End Try
+        End Using
     End Sub
 
 
@@ -92,6 +91,4 @@ Public Class frmemployeeReg
         dtpDateHired.Value = DateTime.Now
         pictureBox.Image = Nothing
     End Sub
-
-
 End Class
