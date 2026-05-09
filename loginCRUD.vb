@@ -16,4 +16,19 @@ Module loginCRUD
         Return table
 
     End Function
+
+    Public Function LoadEmployee() As DataTable
+        Dim table As New DataTable()
+
+        Using conn As MySqlConnection = GetConnection()
+            Dim query As String = "SELECT employee_id, userName, password FROM employee"
+            Using cmd As New MySqlCommand(query, conn)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(table)
+                End Using
+            End Using
+        End Using
+        Return table
+
+    End Function
 End Module
