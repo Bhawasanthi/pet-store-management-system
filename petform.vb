@@ -8,6 +8,15 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Populate pet type ComboBox
         cmbType.Items.AddRange(New String() {"Dog", "Cat"})
+        LoadPetData()
+    End Sub
+
+    Private Sub LoadPetData()
+        DataGridView1.DataSource = GetPets()
+    End Sub
+
+    Private Sub btnshow_Click(sender As Object, e As EventArgs) Handles btnshow.Click
+        LoadPetData()
     End Sub
 
     Private Sub cmbPetType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbType.SelectedIndexChanged
