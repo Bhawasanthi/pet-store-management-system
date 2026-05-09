@@ -3,43 +3,39 @@
         'TestConnection()
         Dim usersTable As DataTable = LoadUser()
 
-        Dim userRole As String = ""
-        Dim userName As String = ""
-
+        ' Check users table for Admin login
         For Each row As DataRow In usersTable.Rows
             If row("username").ToString() = txtUserName.Text.Trim() AndAlso
                row("password").ToString() = txtPassword.Text.Trim() Then
 
-                userRole = row("role").ToString()
-                userName = row("username").ToString()
-
-                Exit For
+                ' Redirect to adminDashBoard
+                Dim adminDashBoard As New frmadminDashBoard()
+                adminDashBoard.UserRole = row("role").ToString()
+                adminDashBoard.UserName = row("username").ToString()
+                adminDashBoard.Show()
+                Me.Hide()
+                Return
             End If
         Next
 
-        If userRole = "Admin" Then
+        ' If not found in users table, check employee table for User login
+        Dim employeeTable As DataTable = LoadEmployee()
+        For Each row As DataRow In employeeTable.Rows
+            If row("userName").ToString() = txtUserName.Text.Trim() AndAlso
+               row("password").ToString() = txtPassword.Text.Trim() Then
 
+                ' Redirect to userDashBoard
+                Dim dashboard As New userDashBoard()
+                dashboard.UserRole = "User"
+                dashboard.UserName = row("userName").ToString()
+                dashboard.Show()
+                Me.Hide()
+                Return
+            End If
+        Next
 
-
-            ' Open dashboard and pass role if needed
-            Dim adminDashBoard As New frmadminDashBoard()
-            adminDashBoard.UserRole = userRole ' This should be a public property in frmDashboard
-            adminDashBoard.UserName = userName ' Optional
-            adminDashBoard.Show()
-            Me.Hide()
-        ElseIf userRole = "User" Then
-
-
-
-            ' Open dashboard and pass role if needed
-            Dim dashboard As New UserDashboard()
-            dashboard.UserRole = userRole ' This should be a public property in frmDashboard
-            dashboard.UserName = userName ' Optional
-            dashboard.Show()
-            Me.Hide()
-        Else
-            MessageBox.Show("Invalid username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
+        ' If no match in both tables
+        MessageBox.Show("Invalid username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
     End Sub
 
