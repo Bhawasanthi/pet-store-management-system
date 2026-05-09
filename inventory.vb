@@ -1,6 +1,19 @@
 ﻿Imports Org.BouncyCastle.Asn1.X509
 
 Public Class inventory
+
+    Private Sub RefreshInventoryGrid()
+        Try
+            DataGridView1.DataSource = inventoryCRUD.LoadInventory()
+        Catch ex As Exception
+            MessageBox.Show("Failed to refresh inventory: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshInventoryGrid()
+    End Sub
+
     Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
         If cmbCategory.Text = "Product" Then
             lblProductID.Text = "Product ID"
