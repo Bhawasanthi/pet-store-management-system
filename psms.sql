@@ -24,6 +24,101 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `customer_id` int(11) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `contact_number` varchar(20) NOT NULL,
+  `address` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `appointment_id` int(11) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `service_type` varchar(50) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `date` date NOT NULL,
+  `time` varchar(20) NOT NULL,
+  `employee_name` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `product_id` varchar(50) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `expiry_date` date DEFAULT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `availability` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `bill_no` int(11) NOT NULL,
+  `order_date` date NOT NULL,
+  `order_time` varchar(20) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `item_name` varchar(100) NOT NULL,
+  `unit_price` decimal(10,2) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `total_amount` decimal(10,2) NOT NULL,
+  `order_status` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_product`
+--
+
+CREATE TABLE `service_product` (
+  `service_product_id` varchar(50) NOT NULL,
+  `service_type` varchar(50) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `unit_in_stock` int(11) NOT NULL,
+  `expiry_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_product_inventory`
+--
+
+CREATE TABLE `service_product_inventory` (
+  `service_inventory_id` int(11) NOT NULL,
+  `service_product_id` varchar(50) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `supplier_id` int(11) DEFAULT NULL,
+  `quantity` int(11) NOT NULL,
+  `quantity_used` int(11) DEFAULT 0,
+  `unit_in_stock` int(11) NOT NULL,
+  `service_type` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `employee`
 --
 
@@ -175,6 +270,44 @@ ALTER TABLE `users`
   ADD KEY `fk_emp` (`employee_id`);
 
 --
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`customer_id`);
+
+--
+-- Indexes for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`appointment_id`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`bill_no`);
+
+--
+-- Indexes for table `service_product`
+--
+ALTER TABLE `service_product`
+  ADD PRIMARY KEY (`service_product_id`);
+
+--
+-- Indexes for table `service_product_inventory`
+--
+ALTER TABLE `service_product_inventory`
+  ADD PRIMARY KEY (`service_inventory_id`),
+  ADD KEY `fk_service_prod` (`service_product_id`),
+  ADD KEY `fk_service_supplier` (`supplier_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -209,6 +342,30 @@ ALTER TABLE `users`
   MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `bill_no` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `service_product_inventory`
+--
+ALTER TABLE `service_product_inventory`
+  MODIFY `service_inventory_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -217,6 +374,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `inventory`
   ADD CONSTRAINT `fk_supplier` FOREIGN KEY (`supplier_id`) REFERENCES `supplier` (`supplier_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `service_product_inventory`
+--
+ALTER TABLE `service_product_inventory`
+  ADD CONSTRAINT `fk_service_prod` FOREIGN KEY (`service_product_id`) REFERENCES `service_product` (`service_product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_service_supplier` FOREIGN KEY (`supplier_id`) REFERENCES `supplier` (`supplier_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
