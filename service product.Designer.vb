@@ -24,13 +24,13 @@ Partial Class frmServiceProduct
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox5 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.dtpExpiry = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.txtStock = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cmbProductName = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbType = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -62,26 +62,26 @@ Partial Class frmServiceProduct
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Service Product"
         '
-        'Guna2TextBox1
+        'txtID
         '
-        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(286, 130)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PlaceholderText = ""
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox1.TabIndex = 77
+        Me.txtID.BorderColor = System.Drawing.Color.Black
+        Me.txtID.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtID.DefaultText = ""
+        Me.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtID.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtID.ForeColor = System.Drawing.Color.Black
+        Me.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtID.Location = New System.Drawing.Point(286, 130)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtID.Name = "txtID"
+        Me.txtID.PlaceholderText = ""
+        Me.txtID.SelectedText = ""
+        Me.txtID.Size = New System.Drawing.Size(273, 51)
+        Me.txtID.TabIndex = 77
         '
         'Label2
         '
@@ -94,47 +94,41 @@ Partial Class frmServiceProduct
         Me.Label2.TabIndex = 78
         Me.Label2.Text = "Service Product ID"
         '
-        'Guna2TextBox4
+        'dtpExpiry
         '
-        Me.Guna2TextBox4.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox4.DefaultText = ""
-        Me.Guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(286, 557)
-        Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox4.Name = "Guna2TextBox4"
-        Me.Guna2TextBox4.PlaceholderText = ""
-        Me.Guna2TextBox4.SelectedText = ""
-        Me.Guna2TextBox4.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox4.TabIndex = 81
+        Me.dtpExpiry.BorderColor = System.Drawing.Color.Black
+        Me.dtpExpiry.Checked = True
+        Me.dtpExpiry.FillColor = System.Drawing.Color.White
+        Me.dtpExpiry.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.dtpExpiry.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.dtpExpiry.Location = New System.Drawing.Point(286, 557)
+        Me.dtpExpiry.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.dtpExpiry.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.dtpExpiry.Name = "dtpExpiry"
+        Me.dtpExpiry.Size = New System.Drawing.Size(273, 51)
+        Me.dtpExpiry.TabIndex = 81
+        Me.dtpExpiry.Value = New Date(2025, 6, 8, 0, 0, 0, 0)
         '
-        'Guna2TextBox5
+        'txtStock
         '
-        Me.Guna2TextBox5.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox5.DefaultText = ""
-        Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox5.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Location = New System.Drawing.Point(286, 462)
-        Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox5.Name = "Guna2TextBox5"
-        Me.Guna2TextBox5.PlaceholderText = ""
-        Me.Guna2TextBox5.SelectedText = ""
-        Me.Guna2TextBox5.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox5.TabIndex = 82
+        Me.txtStock.BorderColor = System.Drawing.Color.Black
+        Me.txtStock.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtStock.DefaultText = ""
+        Me.txtStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtStock.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtStock.ForeColor = System.Drawing.Color.Black
+        Me.txtStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtStock.Location = New System.Drawing.Point(286, 462)
+        Me.txtStock.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtStock.Name = "txtStock"
+        Me.txtStock.PlaceholderText = ""
+        Me.txtStock.SelectedText = ""
+        Me.txtStock.Size = New System.Drawing.Size(273, 51)
+        Me.txtStock.TabIndex = 82
         '
         'Label1
         '
@@ -158,22 +152,22 @@ Partial Class frmServiceProduct
         Me.Label3.TabIndex = 85
         Me.Label3.Text = "Product Name"
         '
-        'Guna2ComboBox1
+        'cmbProductName
         '
-        Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox1.BorderColor = System.Drawing.Color.Black
-        Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2ComboBox1.ItemHeight = 30
-        Me.Guna2ComboBox1.Items.AddRange(New Object() {"Clipper & blade", "Scissor", "Nail trimmer", "Brush", "Comb", "Gloves", "Apron", "Dewormer", "Vaccines", "Antibiotics", "Painkillers", "Blood test kit", "Urine test strip", "", ""})
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(286, 357)
-        Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(273, 36)
-        Me.Guna2ComboBox1.TabIndex = 88
+        Me.cmbProductName.BackColor = System.Drawing.Color.Transparent
+        Me.cmbProductName.BorderColor = System.Drawing.Color.Black
+        Me.cmbProductName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbProductName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbProductName.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbProductName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbProductName.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.cmbProductName.ForeColor = System.Drawing.Color.Black
+        Me.cmbProductName.ItemHeight = 30
+        Me.cmbProductName.Items.AddRange(New Object() {"Clipper & blade", "Scissor", "Nail trimmer", "Brush", "Comb", "Gloves", "Apron", "Dewormer", "Vaccines", "Antibiotics", "Painkillers", "Blood test kit", "Urine test strip"})
+        Me.cmbProductName.Location = New System.Drawing.Point(286, 357)
+        Me.cmbProductName.Name = "cmbProductName"
+        Me.cmbProductName.Size = New System.Drawing.Size(273, 36)
+        Me.cmbProductName.TabIndex = 88
         '
         'Label5
         '
@@ -197,7 +191,7 @@ Partial Class frmServiceProduct
         Me.cmbType.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
         Me.cmbType.ForeColor = System.Drawing.Color.Black
         Me.cmbType.ItemHeight = 30
-        Me.cmbType.Items.AddRange(New Object() {"Veterinarian", "Groomig"})
+        Me.cmbType.Items.AddRange(New Object() {"Veterinarian", "Grooming"})
         Me.cmbType.Location = New System.Drawing.Point(286, 243)
         Me.cmbType.Name = "cmbType"
         Me.cmbType.Size = New System.Drawing.Size(273, 36)
@@ -212,7 +206,7 @@ Partial Class frmServiceProduct
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(122, 23)
         Me.Label4.TabIndex = 91
-        Me.Label4.Text = "Expairy Date"
+        Me.Label4.Text = "Expiry Date"
         '
         'btnAdd
         '
@@ -317,16 +311,16 @@ Partial Class frmServiceProduct
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cmbType)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Guna2ComboBox1)
+        Me.Controls.Add(Me.cmbProductName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Guna2TextBox5)
-        Me.Controls.Add(Me.Guna2TextBox4)
+        Me.Controls.Add(Me.txtStock)
+        Me.Controls.Add(Me.dtpExpiry)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Guna2TextBox1)
+        Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmServiceProduct"
-        Me.Text = "96569"
+        Me.Text = "Service Product"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvServiceProduct, System.ComponentModel.ISupportInitialize).EndInit()
@@ -337,13 +331,13 @@ Partial Class frmServiceProduct
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label13 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtID As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox5 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents dtpExpiry As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents txtStock As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cmbProductName As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents cmbType As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label4 As Label
