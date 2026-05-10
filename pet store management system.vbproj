@@ -149,6 +149,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dbConnection.vb" />
+    <Compile Include="productCRUD.vb" />
     <Compile Include="employeeReg.Designer.vb">
       <DependentUpon>employeeReg.vb</DependentUpon>
     </Compile>
