@@ -136,6 +136,7 @@
     <Compile Include="adminDashBoard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="appointmentCRUD.vb" />
     <Compile Include="appointment.Designer.vb">
       <DependentUpon>appointment.vb</DependentUpon>
     </Compile>
