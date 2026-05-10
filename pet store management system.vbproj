@@ -145,6 +145,7 @@
     <Compile Include="Customer.Designer.vb">
       <DependentUpon>Customer.vb</DependentUpon>
     </Compile>
+    <Compile Include="customerCRUD.vb" />
     <Compile Include="Customer.vb">
       <SubType>Form</SubType>
     </Compile>
