@@ -24,6 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `product_id` varchar(50) NOT NULL,
+  `product_type` varchar(50) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `expiry_date` date NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `availability` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `employee`
 --
 
@@ -160,6 +175,12 @@ ALTER TABLE `inventory`
 --
 ALTER TABLE `pets`
   ADD PRIMARY KEY (`PetID`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`product_id`);
 
 --
 -- Indexes for table `supplier`
