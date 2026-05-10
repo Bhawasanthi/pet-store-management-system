@@ -4,17 +4,7 @@ Imports System.Data
 Public Class frmService
     Private Sub LoadData()
         Try
-            Using conn As MySqlConnection = dbConnection.GetConnection()
-                If conn.State <> ConnectionState.Open Then conn.Open()
-                Dim query As String = "SELECT * FROM service"
-                Using cmd As New MySqlCommand(query, conn)
-                    Using adapter As New MySqlDataAdapter(cmd)
-                        Dim table As New DataTable()
-                        adapter.Fill(table)
-                        DataGridView1.DataSource = table
-                    End Using
-                End Using
-            End Using
+            DataGridView1.DataSource = serviceCRUD.LoadServices()
         Catch ex As Exception
             MessageBox.Show("Error loading data: " & ex.Message)
         End Try
@@ -36,20 +26,17 @@ Public Class frmService
         End If
 
         Try
-            Using conn As MySqlConnection = dbConnection.GetConnection()
-                If conn.State <> ConnectionState.Open Then conn.Open()
-                Dim query As String = "INSERT INTO service (type, service_charge, availability, employee_name) VALUES (@type, @charge, @availability, @employee)"
-                Using cmd As New MySqlCommand(query, conn)
-                    cmd.Parameters.AddWithValue("@type", cmbType.Text)
-                    cmd.Parameters.AddWithValue("@charge", txtCharge.Text)
-                    cmd.Parameters.AddWithValue("@availability", cmbAvailability.Text)
-                    cmd.Parameters.AddWithValue("@employee", txtEmployeeName.Text)
-                    cmd.ExecuteNonQuery()
-                End Using
-            End Using
-            MessageBox.Show("Service added successfully!")
-            LoadData()
-            ClearFields()
+            Dim charge As Decimal
+            If Not Decimal.TryParse(txtCharge.Text, charge) Then
+                MessageBox.Show("Please enter a valid numeric charge.")
+                Return
+            End If
+
+            If serviceCRUD.AddService(cmbType.Text, charge, cmbAvailability.Text, txtEmployeeName.Text) Then
+                MessageBox.Show("Service added successfully!")
+                LoadData()
+                ClearFields()
+            End If
         Catch ex As Exception
             MessageBox.Show("Error adding service: " & ex.Message)
         End Try
@@ -66,20 +53,16 @@ Public Class frmService
         End If
 
         Try
-            Using conn As MySqlConnection = dbConnection.GetConnection()
-                If conn.State <> ConnectionState.Open Then conn.Open()
-                Dim query As String = "UPDATE service SET type=@type, service_charge=@charge, availability=@availability, employee_name=@employee WHERE service_id=@id"
-                Using cmd As New MySqlCommand(query, conn)
-                    cmd.Parameters.AddWithValue("@type", cmbType.Text)
-                    cmd.Parameters.AddWithValue("@charge", txtCharge.Text)
-                    cmd.Parameters.AddWithValue("@availability", cmbAvailability.Text)
-                    cmd.Parameters.AddWithValue("@employee", txtEmployeeName.Text)
-                    cmd.Parameters.AddWithValue("@id", txtID.Text)
-                    cmd.ExecuteNonQuery()
-                End Using
-            End Using
-            MessageBox.Show("Service updated successfully!")
-            LoadData()
+            Dim charge As Decimal
+            If Not Decimal.TryParse(txtCharge.Text, charge) Then
+                MessageBox.Show("Please enter a valid numeric charge.")
+                Return
+            End If
+
+            If serviceCRUD.UpdateService(Convert.ToInt32(txtID.Text), cmbType.Text, charge, cmbAvailability.Text, txtEmployeeName.Text) Then
+                MessageBox.Show("Service updated successfully!")
+                LoadData()
+            End If
         Catch ex As Exception
             MessageBox.Show("Error updating service: " & ex.Message)
         End Try
@@ -94,17 +77,11 @@ Public Class frmService
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
             Try
-                Using conn As MySqlConnection = dbConnection.GetConnection()
-                    If conn.State <> ConnectionState.Open Then conn.Open()
-                    Dim query As String = "DELETE FROM service WHERE service_id=@id"
-                    Using cmd As New MySqlCommand(query, conn)
-                        cmd.Parameters.AddWithValue("@id", txtID.Text)
-                        cmd.ExecuteNonQuery()
-                    End Using
-                End Using
-                MessageBox.Show("Service deleted successfully!")
-                LoadData()
-                ClearFields()
+                If serviceCRUD.DeleteService(Convert.ToInt32(txtID.Text)) Then
+                    MessageBox.Show("Service deleted successfully!")
+                    LoadData()
+                    ClearFields()
+                End If
             Catch ex As Exception
                 MessageBox.Show("Error deleting service: " & ex.Message)
             End Try

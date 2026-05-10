@@ -215,6 +215,7 @@
     <Compile Include="service product.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="serviceCRUD.vb" />
     <Compile Include="service.Designer.vb">
       <DependentUpon>service.vb</DependentUpon>
     </Compile>
