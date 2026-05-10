@@ -116,6 +116,20 @@ CREATE TABLE `supplier` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `service_product`
+--
+
+CREATE TABLE `service_product` (
+  `service_product_id` int(11) NOT NULL,
+  `service_type` varchar(50) DEFAULT NULL,
+  `product_name` varchar(100) DEFAULT NULL,
+  `unit_in_stock` int(11) DEFAULT NULL,
+  `expiry_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -168,6 +182,12 @@ ALTER TABLE `supplier`
   ADD PRIMARY KEY (`supplier_id`);
 
 --
+-- Indexes for table `service_product`
+--
+ALTER TABLE `service_product`
+  ADD PRIMARY KEY (`service_product_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -201,6 +221,12 @@ ALTER TABLE `pets`
 --
 ALTER TABLE `supplier`
   MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `service_product`
+--
+ALTER TABLE `service_product`
+  MODIFY `service_product_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
