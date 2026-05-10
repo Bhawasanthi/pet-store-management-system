@@ -138,9 +138,31 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`userid`, `role`, `sqes`, `answer`, `changeDate_Time`, `oldPassword`, `username`, `password`, `employee_id`) VALUES
 (1, 'Admin', 'favourite color', 'orange ', 'cygcy', 'bhawa', 'bhawa', 'bhawa123', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `appointment_id` int(11) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `service_type` varchar(50) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `appointment_date` date NOT NULL,
+  `appointment_time` varchar(20) NOT NULL,
+  `employee_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`appointment_id`);
 
 --
 -- Indexes for table `employee`
@@ -177,6 +199,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `employee`
