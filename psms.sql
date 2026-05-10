@@ -208,6 +208,23 @@ ALTER TABLE `supplier`
 ALTER TABLE `users`
   MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `appointment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(100) NOT NULL,
+  `service_type` varchar(50) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `appointment_date` date NOT NULL,
+  `appointment_time` varchar(20) NOT NULL,
+  `employee_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`appointment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Constraints for dumped tables
 --
