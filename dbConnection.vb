@@ -24,4 +24,27 @@ Module dbConnection
             End Try
         End Using
     End Function
+
+    Public Function GetNextID(tableName As String) As Integer
+        Dim nextID As Integer = 1
+        Try
+            Using conn As MySqlConnection = GetConnection()
+                If conn IsNot Nothing Then
+                    Dim query As String = "SELECT AUTO_INCREMENT FROM information_schema.TABLES " &
+                                         "WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = @tableName"
+                    Using cmd As New MySqlCommand(query, conn)
+                        cmd.Parameters.AddWithValue("@tableName", tableName)
+                        Dim result = cmd.ExecuteScalar()
+                        If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                            nextID = Convert.ToInt32(result)
+                        End If
+                    End Using
+                End If
+            End Using
+        Catch ex As Exception
+            ' Fallback to 1 if there's an error
+            nextID = 1
+        End Try
+        Return nextID
+    End Function
 End Module

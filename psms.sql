@@ -24,6 +24,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `appointment_id` int(11) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `service_type` varchar(50) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `appointment_date` date NOT NULL,
+  `appointment_time` varchar(20) NOT NULL,
+  `employee_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `product_id` int(11) NOT NULL,
+  `product_type` varchar(50) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `expiry_date` date NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `availability` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE `service` (
+  `service_id` int(11) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `service_charge` decimal(10,2) NOT NULL,
+  `availability` varchar(20) NOT NULL,
+  `employee_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `employee`
 --
 
@@ -143,6 +188,24 @@ INSERT INTO `users` (`userid`, `role`, `sqes`, `answer`, `changeDate_Time`, `old
 --
 
 --
+-- Indexes for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`appointment_id`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`service_id`);
+
+--
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
@@ -177,6 +240,24 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `service`
+--
+ALTER TABLE `service`
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `employee`

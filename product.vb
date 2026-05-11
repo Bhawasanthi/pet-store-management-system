@@ -1,4 +1,8 @@
 ﻿Public Class frmproduct
+    Private Sub frmproduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtID.Text = GetNextID("product").ToString()
+    End Sub
+
     Private Sub cmbProductType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProductType.SelectedIndexChanged
         cmbProductName.Items.Clear()
 
