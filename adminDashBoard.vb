@@ -23,6 +23,10 @@ Public Class frmadminDashBoard
         loadChildForm(New frmCustomer)
     End Sub
 
+    Private Sub btnTransactions_Click(sender As Object, e As EventArgs) Handles btnTransactions.Click
+        loadChildForm(New frmTransactions)
+    End Sub
+
     Private Sub btnPet_Click(sender As Object, e As EventArgs) Handles btnPet.Click
         loadChildForm(New frmPet)
     End Sub

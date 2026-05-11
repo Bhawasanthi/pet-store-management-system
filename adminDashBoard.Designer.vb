@@ -27,7 +27,7 @@ Partial Class frmadminDashBoard
         Me.btnReport = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button9 = New Guna.UI2.WinForms.Guna2Button()
         Me.btnOrder = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnSupplier = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnTransactions = New Guna.UI2.WinForms.Guna2Button()
         Me.btnInventory = New Guna.UI2.WinForms.Guna2Button()
         Me.btnService = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAppointment = New Guna.UI2.WinForms.Guna2Button()
@@ -52,7 +52,7 @@ Partial Class frmadminDashBoard
         Me.pnlAdminNavigation.Controls.Add(Me.btnReport)
         Me.pnlAdminNavigation.Controls.Add(Me.Guna2Button9)
         Me.pnlAdminNavigation.Controls.Add(Me.btnOrder)
-        Me.pnlAdminNavigation.Controls.Add(Me.btnSupplier)
+        Me.pnlAdminNavigation.Controls.Add(Me.btnTransactions)
         Me.pnlAdminNavigation.Controls.Add(Me.btnInventory)
         Me.pnlAdminNavigation.Controls.Add(Me.btnService)
         Me.pnlAdminNavigation.Controls.Add(Me.btnAppointment)
@@ -127,24 +127,24 @@ Partial Class frmadminDashBoard
         Me.btnOrder.TabIndex = 10
         Me.btnOrder.Text = "Order"
         '
-        'btnSupplier
+        'btnTransactions
         '
-        Me.btnSupplier.Animated = True
-        Me.btnSupplier.AutoRoundedCorners = True
-        Me.btnSupplier.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnSupplier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnSupplier.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnSupplier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnSupplier.FillColor = System.Drawing.Color.Transparent
-        Me.btnSupplier.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
-        Me.btnSupplier.ForeColor = System.Drawing.Color.Black
-        Me.btnSupplier.HoverState.FillColor = System.Drawing.Color.White
-        Me.btnSupplier.Location = New System.Drawing.Point(3, 609)
-        Me.btnSupplier.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnSupplier.Name = "btnSupplier"
-        Me.btnSupplier.Size = New System.Drawing.Size(239, 38)
-        Me.btnSupplier.TabIndex = 9
-        Me.btnSupplier.Text = "Transactions"
+        Me.btnTransactions.Animated = True
+        Me.btnTransactions.AutoRoundedCorners = True
+        Me.btnTransactions.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnTransactions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnTransactions.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnTransactions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnTransactions.FillColor = System.Drawing.Color.Transparent
+        Me.btnTransactions.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnTransactions.ForeColor = System.Drawing.Color.Black
+        Me.btnTransactions.HoverState.FillColor = System.Drawing.Color.White
+        Me.btnTransactions.Location = New System.Drawing.Point(3, 609)
+        Me.btnTransactions.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnTransactions.Name = "btnTransactions"
+        Me.btnTransactions.Size = New System.Drawing.Size(239, 38)
+        Me.btnTransactions.TabIndex = 9
+        Me.btnTransactions.Text = "Transactions"
         '
         'btnInventory
         '
@@ -396,7 +396,7 @@ Partial Class frmadminDashBoard
     Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnReport As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnOrder As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnSupplier As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnTransactions As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnInventory As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnService As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnAppointment As Guna.UI2.WinForms.Guna2Button
