@@ -8,6 +8,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Populate pet type ComboBox
         cmbType.Items.AddRange(New String() {"Dog", "Cat"})
+        txtID.Text = GetNextID("pets").ToString()
     End Sub
 
     Private Sub cmbPetType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbType.SelectedIndexChanged

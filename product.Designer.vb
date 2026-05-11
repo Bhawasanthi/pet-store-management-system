@@ -24,7 +24,7 @@ Partial Class frmproduct
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -64,26 +64,27 @@ Partial Class frmproduct
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Product"
         '
-        'txtName
+        'txtID
         '
-        Me.txtName.BorderColor = System.Drawing.Color.Black
-        Me.txtName.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtName.DefaultText = ""
-        Me.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtName.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.ForeColor = System.Drawing.Color.Black
-        Me.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtName.Location = New System.Drawing.Point(157, 116)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtName.Name = "txtName"
-        Me.txtName.PlaceholderText = ""
-        Me.txtName.SelectedText = ""
-        Me.txtName.Size = New System.Drawing.Size(309, 51)
-        Me.txtName.TabIndex = 36
+        Me.txtID.BorderColor = System.Drawing.Color.Black
+        Me.txtID.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtID.DefaultText = ""
+        Me.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtID.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.ForeColor = System.Drawing.Color.Black
+        Me.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtID.Location = New System.Drawing.Point(157, 116)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtID.Name = "txtID"
+        Me.txtID.PlaceholderText = ""
+        Me.txtID.ReadOnly = True
+        Me.txtID.SelectedText = ""
+        Me.txtID.Size = New System.Drawing.Size(309, 51)
+        Me.txtID.TabIndex = 36
         '
         'Label1
         '
@@ -348,7 +349,7 @@ Partial Class frmproduct
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmproduct"
         Me.Text = "pet_Buy"
@@ -363,7 +364,7 @@ Partial Class frmproduct
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label13 As Label
-    Friend WithEvents txtName As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtID As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

@@ -469,6 +469,7 @@ Partial Class frmPet
         Me.txtID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtID.Name = "txtID"
         Me.txtID.PlaceholderText = ""
+        Me.txtID.ReadOnly = True
         Me.txtID.SelectedText = ""
         Me.txtID.Size = New System.Drawing.Size(273, 51)
         Me.txtID.TabIndex = 1
