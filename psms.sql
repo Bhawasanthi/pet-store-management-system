@@ -217,6 +217,119 @@ ALTER TABLE `users`
 --
 ALTER TABLE `inventory`
   ADD CONSTRAINT `fk_supplier` FOREIGN KEY (`supplier_id`) REFERENCES `supplier` (`supplier_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `customer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(100) NOT NULL,
+  `contact_number` varchar(20) NOT NULL,
+  `address` text NOT NULL,
+  PRIMARY KEY (`customer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `appointment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(100) NOT NULL,
+  `service_type` varchar(100) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `appointment_date` date NOT NULL,
+  `appointment_time` varchar(20) NOT NULL,
+  `employee_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`appointment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `product_id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_type` varchar(50) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `expiry_date` date NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `availability` varchar(20) NOT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE `service` (
+  `service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(100) NOT NULL,
+  `service_charge` decimal(10,2) NOT NULL,
+  `availability` varchar(20) NOT NULL,
+  `employee_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(100) NOT NULL,
+  `order_date` date NOT NULL,
+  `order_time` varchar(20) NOT NULL,
+  `total_amount` decimal(10,2) NOT NULL,
+  `status` varchar(20) NOT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `item_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) NOT NULL,
+  `item_name` varchar(100) NOT NULL,
+  `item_type` varchar(50) NOT NULL,
+  `unit_price` decimal(10,2) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `subtotal` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`item_id`),
+  KEY `fk_order` (`order_id`),
+  CONSTRAINT `fk_order` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_product`
+--
+
+CREATE TABLE `service_product` (
+  `service_product_id` int(11) NOT NULL AUTO_INCREMENT,
+  `service_type` varchar(100) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `unit_in_stock` int(11) NOT NULL,
+  `expiry_date` date NOT NULL,
+  PRIMARY KEY (`service_product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
