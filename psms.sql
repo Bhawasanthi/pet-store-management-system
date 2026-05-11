@@ -330,6 +330,34 @@ CREATE TABLE `service_product` (
   PRIMARY KEY (`service_product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(100) NOT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `transaction_date` date NOT NULL,
+  `transaction_time` varchar(20) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  PRIMARY KEY (`transaction_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`transaction_id`, `customer_name`, `amount`, `transaction_date`, `transaction_time`, `type`) VALUES
+(1, 'John Doe', 50.00, '2026-05-11', '10:00 AM', 'Product Purchase'),
+(2, 'Jane Smith', 150.00, '2026-05-11', '11:30 AM', 'Service Payment'),
+(3, 'Bob Brown', 2000.00, '2026-05-12', '02:00 PM', 'Pet Sale'),
+(4, 'Alice White', 75.00, '2026-05-05', '09:00 AM', 'Product Purchase'),
+(5, 'Charlie Green', 120.00, '2026-02-14', '04:00 PM', 'Service Payment'),
+(6, 'David Black', 300.00, '2025-11-20', '01:00 PM', 'Pet Sale');
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
