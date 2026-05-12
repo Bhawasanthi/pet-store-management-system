@@ -116,6 +116,82 @@ CREATE TABLE `supplier` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `product_id` int(11) NOT NULL,
+  `product_type` varchar(50) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `expiry_date` date NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `availability` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`product_id`, `product_type`, `product_name`, `expiry_date`, `price`, `availability`) VALUES
+(1, 'Food', 'Dog Food', '2026-12-31', 50.00, 'Available'),
+(2, 'Toys', 'Ball', '2030-01-01', 10.00, 'Available');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE `service` (
+  `service_id` int(11) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `service_charge` decimal(10,2) NOT NULL,
+  `availability` varchar(20) NOT NULL,
+  `employee_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `service`
+--
+
+INSERT INTO `service` (`service_id`, `type`, `service_charge`, `availability`, `employee_name`) VALUES
+(1, 'Grooming', 30.00, 'Available', 'isurini');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(11) NOT NULL,
+  `bill_no` varchar(50) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `order_date` date NOT NULL,
+  `order_time` varchar(20) NOT NULL,
+  `total_amount` decimal(10,2) NOT NULL,
+  `status` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `item_id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `item_name` varchar(100) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `unit_price` decimal(10,2) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `total_price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -162,6 +238,31 @@ ALTER TABLE `pets`
   ADD PRIMARY KEY (`PetID`);
 
 --
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`service_id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD PRIMARY KEY (`item_id`),
+  ADD KEY `fk_order` (`order_id`);
+
+--
 -- Indexes for table `supplier`
 --
 ALTER TABLE `supplier`
@@ -197,6 +298,30 @@ ALTER TABLE `pets`
   MODIFY `PetID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `service`
+--
+ALTER TABLE `service`
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `order_items`
+--
+ALTER TABLE `order_items`
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
@@ -217,6 +342,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `inventory`
   ADD CONSTRAINT `fk_supplier` FOREIGN KEY (`supplier_id`) REFERENCES `supplier` (`supplier_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD CONSTRAINT `fk_order` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

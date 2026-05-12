@@ -23,15 +23,15 @@ Partial Class frmOrder
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtID = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtBillNo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox5 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox6 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox7 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2TextBox8 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtCustomerName = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtUnitPrice = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtQty = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtTotalPrice = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtOrderTime = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtStatus = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,18 +41,22 @@ Partial Class frmOrder
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox10 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtStock = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAddToCart = New Guna.UI2.WinForms.Guna2Button()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
+        Me.dtpOrderDate = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.cmbType = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.dgvCart = New System.Windows.Forms.DataGridView()
+        Me.cmbCategory = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.txtGrandTotal = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnPlaceOrder = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnPrintReceipt = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvCart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -66,26 +70,26 @@ Partial Class frmOrder
         Me.Label2.TabIndex = 44
         Me.Label2.Text = "Bill No"
         '
-        'txtID
+        'txtBillNo
         '
-        Me.txtID.BorderColor = System.Drawing.Color.Black
-        Me.txtID.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtID.DefaultText = ""
-        Me.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtID.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.txtID.ForeColor = System.Drawing.Color.Black
-        Me.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtID.Location = New System.Drawing.Point(105, 78)
-        Me.txtID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtID.Name = "txtID"
-        Me.txtID.PlaceholderText = ""
-        Me.txtID.SelectedText = ""
-        Me.txtID.Size = New System.Drawing.Size(92, 49)
-        Me.txtID.TabIndex = 45
+        Me.txtBillNo.BorderColor = System.Drawing.Color.Black
+        Me.txtBillNo.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtBillNo.DefaultText = ""
+        Me.txtBillNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtBillNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtBillNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtBillNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtBillNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtBillNo.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtBillNo.ForeColor = System.Drawing.Color.Black
+        Me.txtBillNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtBillNo.Location = New System.Drawing.Point(105, 78)
+        Me.txtBillNo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtBillNo.Name = "txtBillNo"
+        Me.txtBillNo.PlaceholderText = ""
+        Me.txtBillNo.SelectedText = ""
+        Me.txtBillNo.Size = New System.Drawing.Size(92, 49)
+        Me.txtBillNo.TabIndex = 45
         '
         'Panel1
         '
@@ -106,131 +110,131 @@ Partial Class frmOrder
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Order"
         '
-        'Guna2TextBox2
+        'txtCustomerName
         '
-        Me.Guna2TextBox2.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox2.DefaultText = ""
-        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(171, 213)
-        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox2.Name = "Guna2TextBox2"
-        Me.Guna2TextBox2.PlaceholderText = ""
-        Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox2.TabIndex = 48
+        Me.txtCustomerName.BorderColor = System.Drawing.Color.Black
+        Me.txtCustomerName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCustomerName.DefaultText = ""
+        Me.txtCustomerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCustomerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCustomerName.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtCustomerName.ForeColor = System.Drawing.Color.Black
+        Me.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCustomerName.Location = New System.Drawing.Point(171, 213)
+        Me.txtCustomerName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCustomerName.Name = "txtCustomerName"
+        Me.txtCustomerName.PlaceholderText = ""
+        Me.txtCustomerName.SelectedText = ""
+        Me.txtCustomerName.Size = New System.Drawing.Size(273, 51)
+        Me.txtCustomerName.TabIndex = 48
         '
-        'Guna2TextBox4
+        'txtUnitPrice
         '
-        Me.Guna2TextBox4.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox4.DefaultText = ""
-        Me.Guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(1526, 89)
-        Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox4.Name = "Guna2TextBox4"
-        Me.Guna2TextBox4.PlaceholderText = ""
-        Me.Guna2TextBox4.SelectedText = ""
-        Me.Guna2TextBox4.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox4.TabIndex = 50
+        Me.txtUnitPrice.BorderColor = System.Drawing.Color.Black
+        Me.txtUnitPrice.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUnitPrice.DefaultText = ""
+        Me.txtUnitPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtUnitPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtUnitPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUnitPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUnitPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUnitPrice.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtUnitPrice.ForeColor = System.Drawing.Color.Black
+        Me.txtUnitPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUnitPrice.Location = New System.Drawing.Point(1526, 89)
+        Me.txtUnitPrice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtUnitPrice.Name = "txtUnitPrice"
+        Me.txtUnitPrice.PlaceholderText = ""
+        Me.txtUnitPrice.SelectedText = ""
+        Me.txtUnitPrice.Size = New System.Drawing.Size(273, 51)
+        Me.txtUnitPrice.TabIndex = 50
         '
-        'Guna2TextBox5
+        'txtQty
         '
-        Me.Guna2TextBox5.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox5.DefaultText = ""
-        Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox5.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Location = New System.Drawing.Point(1526, 186)
-        Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox5.Name = "Guna2TextBox5"
-        Me.Guna2TextBox5.PlaceholderText = ""
-        Me.Guna2TextBox5.SelectedText = ""
-        Me.Guna2TextBox5.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox5.TabIndex = 51
+        Me.txtQty.BorderColor = System.Drawing.Color.Black
+        Me.txtQty.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtQty.DefaultText = ""
+        Me.txtQty.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtQty.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtQty.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtQty.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtQty.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtQty.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtQty.ForeColor = System.Drawing.Color.Black
+        Me.txtQty.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtQty.Location = New System.Drawing.Point(1526, 186)
+        Me.txtQty.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtQty.Name = "txtQty"
+        Me.txtQty.PlaceholderText = ""
+        Me.txtQty.SelectedText = ""
+        Me.txtQty.Size = New System.Drawing.Size(273, 51)
+        Me.txtQty.TabIndex = 51
         '
-        'Guna2TextBox6
+        'txtTotalPrice
         '
-        Me.Guna2TextBox6.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox6.DefaultText = ""
-        Me.Guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox6.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox6.Location = New System.Drawing.Point(1526, 275)
-        Me.Guna2TextBox6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox6.Name = "Guna2TextBox6"
-        Me.Guna2TextBox6.PlaceholderText = ""
-        Me.Guna2TextBox6.SelectedText = ""
-        Me.Guna2TextBox6.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox6.TabIndex = 52
+        Me.txtTotalPrice.BorderColor = System.Drawing.Color.Black
+        Me.txtTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTotalPrice.DefaultText = ""
+        Me.txtTotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtTotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtTotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTotalPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtTotalPrice.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtTotalPrice.ForeColor = System.Drawing.Color.Black
+        Me.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtTotalPrice.Location = New System.Drawing.Point(1526, 275)
+        Me.txtTotalPrice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTotalPrice.Name = "txtTotalPrice"
+        Me.txtTotalPrice.PlaceholderText = ""
+        Me.txtTotalPrice.SelectedText = ""
+        Me.txtTotalPrice.Size = New System.Drawing.Size(273, 51)
+        Me.txtTotalPrice.TabIndex = 52
         '
-        'Guna2TextBox7
+        'txtOrderTime
         '
-        Me.Guna2TextBox7.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox7.DefaultText = ""
-        Me.Guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox7.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox7.Location = New System.Drawing.Point(648, 74)
-        Me.Guna2TextBox7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox7.Name = "Guna2TextBox7"
-        Me.Guna2TextBox7.PlaceholderText = ""
-        Me.Guna2TextBox7.SelectedText = ""
-        Me.Guna2TextBox7.Size = New System.Drawing.Size(120, 51)
-        Me.Guna2TextBox7.TabIndex = 53
+        Me.txtOrderTime.BorderColor = System.Drawing.Color.Black
+        Me.txtOrderTime.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtOrderTime.DefaultText = ""
+        Me.txtOrderTime.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtOrderTime.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtOrderTime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtOrderTime.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtOrderTime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtOrderTime.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtOrderTime.ForeColor = System.Drawing.Color.Black
+        Me.txtOrderTime.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtOrderTime.Location = New System.Drawing.Point(648, 74)
+        Me.txtOrderTime.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtOrderTime.Name = "txtOrderTime"
+        Me.txtOrderTime.PlaceholderText = ""
+        Me.txtOrderTime.SelectedText = ""
+        Me.txtOrderTime.Size = New System.Drawing.Size(120, 51)
+        Me.txtOrderTime.TabIndex = 53
         '
-        'Guna2TextBox8
+        'txtStatus
         '
-        Me.Guna2TextBox8.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox8.DefaultText = ""
-        Me.Guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox8.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox8.Location = New System.Drawing.Point(1526, 361)
-        Me.Guna2TextBox8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox8.Name = "Guna2TextBox8"
-        Me.Guna2TextBox8.PlaceholderText = ""
-        Me.Guna2TextBox8.SelectedText = ""
-        Me.Guna2TextBox8.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox8.TabIndex = 54
+        Me.txtStatus.BorderColor = System.Drawing.Color.Black
+        Me.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtStatus.DefaultText = ""
+        Me.txtStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtStatus.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtStatus.ForeColor = System.Drawing.Color.Black
+        Me.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtStatus.Location = New System.Drawing.Point(1526, 361)
+        Me.txtStatus.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtStatus.Name = "txtStatus"
+        Me.txtStatus.PlaceholderText = ""
+        Me.txtStatus.SelectedText = ""
+        Me.txtStatus.Size = New System.Drawing.Size(273, 51)
+        Me.txtStatus.TabIndex = 54
         '
         'Label1
         '
@@ -331,26 +335,26 @@ Partial Class frmOrder
         Me.Label10.TabIndex = 64
         Me.Label10.Text = "Time"
         '
-        'Guna2TextBox10
+        'txtStock
         '
-        Me.Guna2TextBox10.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox10.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox10.DefaultText = ""
-        Me.Guna2TextBox10.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox10.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox10.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox10.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox10.Location = New System.Drawing.Point(1526, 461)
-        Me.Guna2TextBox10.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox10.Name = "Guna2TextBox10"
-        Me.Guna2TextBox10.PlaceholderText = ""
-        Me.Guna2TextBox10.SelectedText = ""
-        Me.Guna2TextBox10.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox10.TabIndex = 65
+        Me.txtStock.BorderColor = System.Drawing.Color.Black
+        Me.txtStock.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtStock.DefaultText = ""
+        Me.txtStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtStock.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtStock.ForeColor = System.Drawing.Color.Black
+        Me.txtStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtStock.Location = New System.Drawing.Point(1526, 461)
+        Me.txtStock.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtStock.Name = "txtStock"
+        Me.txtStock.PlaceholderText = ""
+        Me.txtStock.SelectedText = ""
+        Me.txtStock.Size = New System.Drawing.Size(273, 51)
+        Me.txtStock.TabIndex = 65
         '
         'Label11
         '
@@ -363,25 +367,25 @@ Partial Class frmOrder
         Me.Label11.TabIndex = 66
         Me.Label11.Text = "Unit in Stock"
         '
-        'btnAdd
+        'btnAddToCart
         '
-        Me.btnAdd.Animated = True
-        Me.btnAdd.AutoRoundedCorners = True
-        Me.btnAdd.BackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.BorderThickness = 1
-        Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnAdd.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(1710, 543)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(165, 57)
-        Me.btnAdd.TabIndex = 67
-        Me.btnAdd.Text = "Add to Cart"
-        Me.btnAdd.UseTransparentBackground = True
+        Me.btnAddToCart.Animated = True
+        Me.btnAddToCart.AutoRoundedCorners = True
+        Me.btnAddToCart.BackColor = System.Drawing.Color.Transparent
+        Me.btnAddToCart.BorderThickness = 1
+        Me.btnAddToCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAddToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAddToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAddToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAddToCart.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAddToCart.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnAddToCart.ForeColor = System.Drawing.Color.White
+        Me.btnAddToCart.Location = New System.Drawing.Point(1710, 543)
+        Me.btnAddToCart.Name = "btnAddToCart"
+        Me.btnAddToCart.Size = New System.Drawing.Size(165, 57)
+        Me.btnAddToCart.TabIndex = 67
+        Me.btnAddToCart.Text = "Add to Cart"
+        Me.btnAddToCart.UseTransparentBackground = True
         '
         'Label12
         '
@@ -394,38 +398,38 @@ Partial Class frmOrder
         Me.Label12.TabIndex = 69
         Me.Label12.Text = "Type"
         '
-        'Guna2Button1
+        'btnSearch
         '
-        Me.Guna2Button1.Animated = True
-        Me.Guna2Button1.AutoRoundedCorners = True
-        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.BorderThickness = 1
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(905, 377)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(128, 51)
-        Me.Guna2Button1.TabIndex = 70
-        Me.Guna2Button1.Text = "Search"
-        Me.Guna2Button1.UseTransparentBackground = True
+        Me.btnSearch.Animated = True
+        Me.btnSearch.AutoRoundedCorners = True
+        Me.btnSearch.BackColor = System.Drawing.Color.Transparent
+        Me.btnSearch.BorderThickness = 1
+        Me.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSearch.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnSearch.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.Location = New System.Drawing.Point(905, 377)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(128, 51)
+        Me.btnSearch.TabIndex = 70
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseTransparentBackground = True
         '
-        'Guna2DateTimePicker1
+        'dtpOrderDate
         '
-        Me.Guna2DateTimePicker1.Checked = True
-        Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(309, 89)
-        Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
-        Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(212, 36)
-        Me.Guna2DateTimePicker1.TabIndex = 71
-        Me.Guna2DateTimePicker1.Value = New Date(2025, 6, 5, 11, 14, 53, 320)
+        Me.dtpOrderDate.Checked = True
+        Me.dtpOrderDate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.dtpOrderDate.Location = New System.Drawing.Point(309, 89)
+        Me.dtpOrderDate.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.dtpOrderDate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.dtpOrderDate.Name = "dtpOrderDate"
+        Me.dtpOrderDate.Size = New System.Drawing.Size(212, 36)
+        Me.dtpOrderDate.TabIndex = 71
+        Me.dtpOrderDate.Value = New Date(2025, 6, 5, 11, 14, 53, 320)
         '
         'Guna2ComboBox1
         '
@@ -444,53 +448,127 @@ Partial Class frmOrder
         Me.Guna2ComboBox1.Size = New System.Drawing.Size(273, 36)
         Me.Guna2ComboBox1.TabIndex = 73
         '
-        'Guna2TextBox1
+        'txtName
         '
-        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Black
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(579, 377)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PlaceholderText = ""
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(273, 51)
-        Me.Guna2TextBox1.TabIndex = 74
+        Me.txtName.BorderColor = System.Drawing.Color.Black
+        Me.txtName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtName.DefaultText = ""
+        Me.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtName.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtName.ForeColor = System.Drawing.Color.Black
+        Me.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtName.Location = New System.Drawing.Point(579, 377)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtName.Name = "txtName"
+        Me.txtName.PlaceholderText = ""
+        Me.txtName.SelectedText = ""
+        Me.txtName.Size = New System.Drawing.Size(273, 51)
+        Me.txtName.TabIndex = 74
         '
-        'DataGridView1
+        'dgvCart
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(415, 606)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1636, 352)
-        Me.DataGridView1.TabIndex = 75
+        Me.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCart.Location = New System.Drawing.Point(415, 606)
+        Me.dgvCart.Name = "dgvCart"
+        Me.dgvCart.RowHeadersWidth = 51
+        Me.dgvCart.RowTemplate.Height = 24
+        Me.dgvCart.Size = New System.Drawing.Size(1636, 352)
+        Me.dgvCart.TabIndex = 75
         '
-        'cmbType
+        'cmbCategory
         '
-        Me.cmbType.BackColor = System.Drawing.Color.Transparent
-        Me.cmbType.BorderColor = System.Drawing.Color.Black
-        Me.cmbType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbType.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbType.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.cmbType.ForeColor = System.Drawing.Color.Black
-        Me.cmbType.ItemHeight = 30
-        Me.cmbType.Items.AddRange(New Object() {"Pet", "Product", "Service "})
-        Me.cmbType.Location = New System.Drawing.Point(171, 315)
-        Me.cmbType.Name = "cmbType"
-        Me.cmbType.Size = New System.Drawing.Size(273, 36)
-        Me.cmbType.TabIndex = 72
+        Me.cmbCategory.BackColor = System.Drawing.Color.Transparent
+        Me.cmbCategory.BorderColor = System.Drawing.Color.Black
+        Me.cmbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCategory.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbCategory.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.cmbCategory.ForeColor = System.Drawing.Color.Black
+        Me.cmbCategory.ItemHeight = 30
+        Me.cmbCategory.Items.AddRange(New Object() {"Pet", "Product", "Service "})
+        Me.cmbCategory.Location = New System.Drawing.Point(171, 315)
+        Me.cmbCategory.Name = "cmbCategory"
+        Me.cmbCategory.Size = New System.Drawing.Size(273, 36)
+        Me.cmbCategory.TabIndex = 72
+        '
+        'txtGrandTotal
+        '
+        Me.txtGrandTotal.BorderColor = System.Drawing.Color.Black
+        Me.txtGrandTotal.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtGrandTotal.DefaultText = "0.00"
+        Me.txtGrandTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtGrandTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtGrandTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtGrandTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtGrandTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtGrandTotal.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.txtGrandTotal.ForeColor = System.Drawing.Color.Red
+        Me.txtGrandTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtGrandTotal.Location = New System.Drawing.Point(1526, 606)
+        Me.txtGrandTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtGrandTotal.Name = "txtGrandTotal"
+        Me.txtGrandTotal.PlaceholderText = ""
+        Me.txtGrandTotal.ReadOnly = True
+        Me.txtGrandTotal.SelectedText = ""
+        Me.txtGrandTotal.Size = New System.Drawing.Size(273, 51)
+        Me.txtGrandTotal.TabIndex = 76
+        Me.txtGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnPlaceOrder
+        '
+        Me.btnPlaceOrder.Animated = True
+        Me.btnPlaceOrder.AutoRoundedCorners = True
+        Me.btnPlaceOrder.BackColor = System.Drawing.Color.Transparent
+        Me.btnPlaceOrder.BorderThickness = 1
+        Me.btnPlaceOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnPlaceOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnPlaceOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnPlaceOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnPlaceOrder.FillColor = System.Drawing.Color.Green
+        Me.btnPlaceOrder.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnPlaceOrder.ForeColor = System.Drawing.Color.White
+        Me.btnPlaceOrder.Location = New System.Drawing.Point(1526, 680)
+        Me.btnPlaceOrder.Name = "btnPlaceOrder"
+        Me.btnPlaceOrder.Size = New System.Drawing.Size(273, 57)
+        Me.btnPlaceOrder.TabIndex = 77
+        Me.btnPlaceOrder.Text = "Place Order"
+        Me.btnPlaceOrder.UseTransparentBackground = True
+        '
+        'btnPrintReceipt
+        '
+        Me.btnPrintReceipt.Animated = True
+        Me.btnPrintReceipt.AutoRoundedCorners = True
+        Me.btnPrintReceipt.BackColor = System.Drawing.Color.Transparent
+        Me.btnPrintReceipt.BorderThickness = 1
+        Me.btnPrintReceipt.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnPrintReceipt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnPrintReceipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnPrintReceipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnPrintReceipt.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnPrintReceipt.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnPrintReceipt.ForeColor = System.Drawing.Color.White
+        Me.btnPrintReceipt.Location = New System.Drawing.Point(1526, 750)
+        Me.btnPrintReceipt.Name = "btnPrintReceipt"
+        Me.btnPrintReceipt.Size = New System.Drawing.Size(273, 57)
+        Me.btnPrintReceipt.TabIndex = 78
+        Me.btnPrintReceipt.Text = "Print Receipt"
+        Me.btnPrintReceipt.UseTransparentBackground = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Label14.Location = New System.Drawing.Point(1354, 620)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(135, 26)
+        Me.Label14.TabIndex = 79
+        Me.Label14.Text = "Grand Total"
         '
         'frmOrder
         '
@@ -498,16 +576,20 @@ Partial Class frmOrder
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1924, 958)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Guna2TextBox1)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.btnPrintReceipt)
+        Me.Controls.Add(Me.btnPlaceOrder)
+        Me.Controls.Add(Me.txtGrandTotal)
+        Me.Controls.Add(Me.dgvCart)
+        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Guna2ComboBox1)
-        Me.Controls.Add(Me.cmbType)
-        Me.Controls.Add(Me.Guna2DateTimePicker1)
-        Me.Controls.Add(Me.Guna2Button1)
+        Me.Controls.Add(Me.cmbCategory)
+        Me.Controls.Add(Me.dtpOrderDate)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnAddToCart)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Guna2TextBox10)
+        Me.Controls.Add(Me.txtStock)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -517,36 +599,36 @@ Partial Class frmOrder
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Guna2TextBox8)
-        Me.Controls.Add(Me.Guna2TextBox7)
-        Me.Controls.Add(Me.Guna2TextBox6)
-        Me.Controls.Add(Me.Guna2TextBox5)
-        Me.Controls.Add(Me.Guna2TextBox4)
-        Me.Controls.Add(Me.Guna2TextBox2)
+        Me.Controls.Add(Me.txtStatus)
+        Me.Controls.Add(Me.txtOrderTime)
+        Me.Controls.Add(Me.txtTotalPrice)
+        Me.Controls.Add(Me.txtQty)
+        Me.Controls.Add(Me.txtUnitPrice)
+        Me.Controls.Add(Me.txtCustomerName)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.txtID)
+        Me.Controls.Add(Me.txtBillNo)
         Me.Controls.Add(Me.Label2)
         Me.Name = "frmOrder"
         Me.Text = "order"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvCart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtID As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtBillNo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label13 As Label
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox5 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox6 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox7 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox8 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtCustomerName As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtUnitPrice As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtQty As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtTotalPrice As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtOrderTime As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtStatus As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
@@ -556,14 +638,18 @@ Partial Class frmOrder
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Guna2TextBox10 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtStock As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAddToCart As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label12 As Label
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents dtpOrderDate As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents cmbType As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents txtName As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents dgvCart As DataGridView
+    Friend WithEvents cmbCategory As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents txtGrandTotal As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btnPlaceOrder As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnPrintReceipt As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label14 As Label
 End Class
