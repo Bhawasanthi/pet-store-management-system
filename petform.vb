@@ -26,5 +26,18 @@
         cmbBreed.SelectedIndex = -1
     End Sub
 
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        txtID.Clear()
+        cmbType.SelectedIndex = -1
+        cmbBreed.SelectedIndex = -1
+        txtColor.Clear()
+        txtAge.Clear()
+        rbMale.Checked = False
+        rbFemale.Checked = False
+        cmbHealthStatus.SelectedIndex = -1
+        txtPrice.Clear()
+        txtPetimagePath.Clear()
+        petPictureBox.Image = Nothing
+    End Sub
 
 End Class

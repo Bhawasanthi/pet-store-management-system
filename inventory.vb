@@ -46,4 +46,18 @@ Public Class inventory
 
 
     End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        txtStockId.Clear()
+        DateTimePicker1.Value = DateTime.Now
+        cmbCategory.SelectedIndex = -1
+        txtUnitinStock.Clear()
+        txtUnitPrice.Clear()
+        txtSupplierID.Clear()
+        txtQuantity.Clear()
+        txtProductID.Clear()
+        txtStandardPrice.Clear()
+        cmbType.SelectedIndex = -1
+        cmbName.SelectedIndex = -1
+    End Sub
 End Class

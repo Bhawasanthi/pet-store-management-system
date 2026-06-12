@@ -12,4 +12,13 @@
         cmbProductName.Items.AddRange(New String() {"Litter Box", "Poop Bag", "Scooper"})
         End If
     End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        txtName.Clear()
+        cmbProductType.SelectedIndex = -1
+        cmbProductName.SelectedIndex = -1
+        Guna2DateTimePicker1.Value = DateTime.Now
+        Guna2TextBox4.Clear()
+        cmbAvailability.SelectedIndex = -1
+    End Sub
 End Class
