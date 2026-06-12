@@ -47,7 +47,7 @@ Partial Class frmPet
         Me.btndelete = New Guna.UI2.WinForms.Guna2Button()
         Me.btnBrowsePet = New Guna.UI2.WinForms.Guna2Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.btnshow = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnReset = New Guna.UI2.WinForms.Guna2Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -421,25 +421,25 @@ Partial Class frmPet
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'btnshow
+        'btnReset
         '
-        Me.btnshow.Animated = True
-        Me.btnshow.AutoRoundedCorners = True
-        Me.btnshow.BackColor = System.Drawing.Color.Transparent
-        Me.btnshow.BorderThickness = 1
-        Me.btnshow.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnshow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnshow.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnshow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnshow.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnshow.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnshow.ForeColor = System.Drawing.Color.White
-        Me.btnshow.Location = New System.Drawing.Point(627, 648)
-        Me.btnshow.Name = "btnshow"
-        Me.btnshow.Size = New System.Drawing.Size(137, 56)
-        Me.btnshow.TabIndex = 37
-        Me.btnshow.Text = "SHOW"
-        Me.btnshow.UseTransparentBackground = True
+        Me.btnReset.Animated = True
+        Me.btnReset.AutoRoundedCorners = True
+        Me.btnReset.BackColor = System.Drawing.Color.Transparent
+        Me.btnReset.BorderThickness = 1
+        Me.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReset.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnReset.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnReset.ForeColor = System.Drawing.Color.White
+        Me.btnReset.Location = New System.Drawing.Point(627, 648)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(137, 56)
+        Me.btnReset.TabIndex = 37
+        Me.btnReset.Text = "RESET"
+        Me.btnReset.UseTransparentBackground = True
         '
         'Label14
         '
@@ -492,7 +492,7 @@ Partial Class frmPet
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1920, 954)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnshow)
+        Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.btnBrowsePet)
@@ -557,7 +557,7 @@ Partial Class frmPet
     Friend WithEvents Label13 As Label
     Friend WithEvents btnBrowsePet As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents btnshow As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnReset As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label14 As Label
     Friend WithEvents txtID As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents DataGridView1 As DataGridView

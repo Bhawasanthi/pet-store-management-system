@@ -34,7 +34,7 @@ Partial Class frmproduct
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnshow = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnReset = New Guna.UI2.WinForms.Guna2Button()
         Me.btnEdit = New Guna.UI2.WinForms.Guna2Button()
         Me.btndelete = New Guna.UI2.WinForms.Guna2Button()
         Me.cmbProductType = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -202,25 +202,25 @@ Partial Class frmproduct
         Me.btnAdd.Text = "ADD"
         Me.btnAdd.UseTransparentBackground = True
         '
-        'btnshow
+        'btnReset
         '
-        Me.btnshow.Animated = True
-        Me.btnshow.AutoRoundedCorners = True
-        Me.btnshow.BackColor = System.Drawing.Color.Transparent
-        Me.btnshow.BorderThickness = 1
-        Me.btnshow.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnshow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnshow.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnshow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnshow.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnshow.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnshow.ForeColor = System.Drawing.Color.White
-        Me.btnshow.Location = New System.Drawing.Point(659, 627)
-        Me.btnshow.Name = "btnshow"
-        Me.btnshow.Size = New System.Drawing.Size(137, 56)
-        Me.btnshow.TabIndex = 54
-        Me.btnshow.Text = "SHOW"
-        Me.btnshow.UseTransparentBackground = True
+        Me.btnReset.Animated = True
+        Me.btnReset.AutoRoundedCorners = True
+        Me.btnReset.BackColor = System.Drawing.Color.Transparent
+        Me.btnReset.BorderThickness = 1
+        Me.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReset.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnReset.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnReset.ForeColor = System.Drawing.Color.White
+        Me.btnReset.Location = New System.Drawing.Point(659, 627)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(137, 56)
+        Me.btnReset.TabIndex = 54
+        Me.btnReset.Text = "RESET"
+        Me.btnReset.UseTransparentBackground = True
         '
         'btnEdit
         '
@@ -338,7 +338,7 @@ Partial Class frmproduct
         Me.Controls.Add(Me.cmbProductType)
         Me.Controls.Add(Me.btndelete)
         Me.Controls.Add(Me.btnEdit)
-        Me.Controls.Add(Me.btnshow)
+        Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label7)
@@ -373,7 +373,7 @@ Partial Class frmproduct
     Friend WithEvents Label7 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnshow As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnReset As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btndelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cmbProductType As Guna.UI2.WinForms.Guna2ComboBox
